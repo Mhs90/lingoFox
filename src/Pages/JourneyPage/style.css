@@ -791,7 +791,7 @@ main {
         bottom: auto;
         left: auto;
         width: calc(100% - 20px);
-        height: 400px;
+        height: 450px;
         margin: 15px auto;
         padding: 15px;
         box-sizing: border-box;
@@ -814,7 +814,7 @@ main {
 
     .timeline-bar {
         width: 4px;
-        height: 290px;
+        height: 350px;
         border-top: none;
         background-color: #646363;
         left: 35px;
@@ -921,11 +921,11 @@ main {
     }
 
     .timelineContainer {
-        height: 420px;
+        height: 500px;
     }
 
     .timeline-bar {
-        height: 310px;
+        height: 360px;
     }
 
     .reward .details {

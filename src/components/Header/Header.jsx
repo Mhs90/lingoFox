@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './style.css'
 
 export default function Header() {
-    const [language, setLanguage] = useState('persian')
+    const [language, setLanguage] = useState('Persian')
     return (
         <header>
             <div class="days">🔥12 Day</div>
@@ -10,7 +10,7 @@ export default function Header() {
                 <div class="language-select">
                     <img src={`/assets/flags/${language}.png`} alt={language} />
                     <select name="language" onChange={(e) => setLanguage(e.target.value)}>
-                        <option defaultValue="iranian" >Presian</option>
+                        <option defaultValue="persian" >Persian</option>
                         <option defaultValue="chinese">Chinese</option>
                         <option defaultValue="english">English</option>
                         <option defaultValue="german">German</option>
