@@ -5,7 +5,7 @@ import './style.css'
 export default function JourneyPage() {
     return (
         <>
-            <SideBar activeItem="journey" />
+            <SideBar autoActiveItem="journey" />
             <main>
                 <Header />
                 <div className="map">
@@ -80,13 +80,13 @@ export default function JourneyPage() {
                         </div>
                         <div className="stations">
                             <div className="station">
-                                <div className="success"><i class="fa-solid fa-check"></i></div>
+                                <div className="success"><i className="fa-solid fa-check"></i></div>
                                 <i className="fas fa-house"></i>
                                 <p>Welcome To The Village</p>
                             </div>
                             <div className="station">
-                                <div className="success"><i class="fa-solid fa-check"></i></div>
-                                <i class="fa-solid fa-utensils"></i>
+                                <div className="success"><i className="fa-solid fa-check"></i></div>
+                                <i className="fa-solid fa-utensils"></i>
                                 <p>Restaurant Explore</p>
                             </div>
                             <div className="station continuing">
@@ -94,15 +94,15 @@ export default function JourneyPage() {
                                 <p>Travel Communication</p>
                             </div>
                             <div className="station close">
-                                <i class="fa-solid fa-lock"></i>
+                                <i className="fa-solid fa-lock"></i>
                                 <p>Check-In-Hotel</p>
                             </div>
                             <div className="station close">
-                                <i class="fa-solid fa-lock"></i>
+                                <i className="fa-solid fa-lock"></i>
                                 <p>Ask For Direction</p>
                             </div>
                             <div className="station close">
-                                <i class="fa-solid fa-lock"></i>
+                                <i className="fa-solid fa-lock"></i>
                                 <p>Shopping Explorer</p>
                             </div>
                         </div>
@@ -139,17 +139,17 @@ export default function JourneyPage() {
                         <div className="journey-task forthTask">
                             <div className='numberOfTask'>4</div>
                             <p className='taskDescription'>Check-In-Hotel</p>
-                            <i class="fa-solid fa-lock"></i>
+                            <i className="fa-solid fa-lock"></i>
                         </div>
                         <div className="journey-task fifthTask">
                             <div className='numberOfTask'>5</div>
                             <p className='taskDescription'>Ask For Direction</p>
-                            <i class="fa-solid fa-lock"></i>
+                            <i className="fa-solid fa-lock"></i>
                         </div>
                         <div className="journey-task sixthTask">
                             <div className='numberOfTask'>6</div>
                             <p className='taskDescription'>Shopping Explore</p>
-                            <i class="fa-solid fa-lock"></i>
+                            <i className="fa-solid fa-lock"></i>
                         </div>
 
                     </div>

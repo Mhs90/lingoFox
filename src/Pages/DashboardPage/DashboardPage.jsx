@@ -7,7 +7,7 @@ import Header from "../../components/Header";
 export default function DashboardPage() {
     return (
         <>
-            <SideBar activeItem="dashboard" />
+            <SideBar autoActiveItem="dashboard" />
             <main>
                 <Header/>
                 <div className="messageBox">
