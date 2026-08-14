@@ -5,9 +5,9 @@ export default function Header() {
     const [language, setLanguage] = useState('Persian')
     return (
         <header>
-            <div class="days">🔥12 Day</div>
-            <div class="informations">
-                <div class="language-select">
+            <div className="days">🔥12 Day</div>
+            <div className="informations">
+                <div className="language-select">
                     <img src={`/assets/flags/${language}.png`} alt={language} />
                     <select name="language" onChange={(e) => setLanguage(e.target.value)}>
                         <option defaultValue="persian" >Persian</option>
@@ -17,10 +17,10 @@ export default function Header() {
                         <option defaultValue="french">French</option>
                     </select>
                 </div>
-                <div class="messages">
-                    <i class="fa-regular fa-bell"></i>
+                <div className="messages">
+                    <i className="fa-regular fa-bell"></i>
                 </div>
-                <div class="profile">
+                <div className="profile">
                     <img src="/assets/profile.png" alt="profile" /> <span>Daria</span>
                 </div>
             </div>
