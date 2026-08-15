@@ -151,7 +151,16 @@ export default function JourneyPage() {
                             <p className='taskDescription'>Shopping Explore</p>
                             <i className="fa-solid fa-lock"></i>
                         </div>
+                    </div>
+                    <div class="map-controls">
+                        <button class="target-btn">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </button>
 
+                        <div class="zoom-controls">
+                            <button>+</button>
+                            <button>−</button>
+                        </div>
                     </div>
                 </div>
             </main>
