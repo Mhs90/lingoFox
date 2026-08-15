@@ -8,40 +8,49 @@ export default function SideBar({ autoActiveItem }) {
         <div className="sidebar">
             <img src="/assets/Screenshot 2026-08-08 124305.png" alt="logo" className="logo" />
             <ul className="menuContainer">
-                <Link to="/"
+                <Link
+                    to="/"
                     onClick={() => setActiveItem('dashboard')}
                     className={`menu ${activeItem == 'dashboard' ? 'active' : ''}`}>
-                    <i className="fa-solid fa-house"></i> <span>Dashboard</span>
+                    <i className="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
                 </Link>
-                <Link to="/journey"
+                <Link
+                    to="/journey"
                     onClick={() => setActiveItem('journey')}
                     className={`menu ${activeItem == 'journey' ? 'active' : ''}`}>
-                    <i className="fa-solid fa-map"></i> <span>Journey</span>
+                    <i className="fa-solid fa-map"></i>
+                    <span>Journey</span>
                 </Link>
                 <Link
                     onClick={() => setActiveItem('vocabulary')}
                     className={`menu ${activeItem == 'vocabulary' ? 'active' : ''}`}>
-                    <i className="fa-solid fa-book-open"></i><span>Vocabulary</span>
+                    <i className="fa-solid fa-book-open"></i>
+                    <span>Vocabulary</span>
                 </Link>
                 <Link
                     onClick={() => setActiveItem('speaking')}
                     className={`menu ${activeItem == 'speaking' ? 'active' : ''}`}>
-                    <i className="fa-solid fa-microphone"></i><span>Speaking</span>
+                    <i className="fa-solid fa-microphone"></i>
+                    <span>Speaking</span>
                 </Link>
                 <Link
                     onClick={() => setActiveItem('listening')}
                     className={`menu ${activeItem == 'listening' ? 'active' : ''}`}>
-                    <i className="fa-solid fa-headphones"></i><span>Listening</span>
+                    <i className="fa-solid fa-headphones"></i>
+                    <span>Listening</span>
                 </Link>
                 <Link
                     onClick={() => setActiveItem('progress')}
                     className={`menu ${activeItem == 'progress' ? 'active' : ''}`}>
-                    <i className="fa-solid fa-chart-pie"></i><span>Progress</span>
+                    <i className="fa-solid fa-chart-pie"></i>
+                    <span>Progress</span>
                 </Link>
                 <Link
                     onClick={() => setActiveItem('ai')}
                     className={`menu ${activeItem == 'ai' ? 'active' : ''}`}>
-                    <img src="/assets/image.png" alt="fox" className="dashboardImg" /><span>AI Coach </span><div className="new">new</div>
+                    <img src="/assets/image.png" alt="fox" className="dashboardImg" />
+                    <span>AI Coach </span><div className="new">new</div>
                 </Link>
             </ul>
             {activeItem == 'dashboard' ? <div className="MeetNox">
