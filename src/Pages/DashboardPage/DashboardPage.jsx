@@ -13,7 +13,7 @@ export default function DashboardPage() {
                 <div className="messageBox">
                     <div className="left">
                         <p className="greet">Welcome Back Daria !👋</p>
-                        <h1>Your next adventure is watinig.</h1>
+                        <h1>Your next adventure is waiting.</h1>
                         <p className="note">Today's focus :</p>
                         <div>
                             <i className="fa-solid fa-plane"></i> Travel Communication
