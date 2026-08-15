@@ -192,7 +192,6 @@ main {
     background: #E1E1E1;
     border-radius: 10px;
     display: inline-block;
-    overflow: hidden;
 }
 
 .details {
@@ -431,8 +430,10 @@ main {
 
 .map-controls {
     position: absolute;
-    right: 270px;
-    top: 230px;
+    right: 20%;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -461,15 +462,36 @@ main {
     width: 40px;
     background: white;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .zoom-controls button {
+    border-radius: 15px;
     width: 40px;
     height: 40px;
     font-size: 27px;
     box-shadow: none;
+}
+
+.react-transform-wrapper {
+    width: 100% !important;
+    height: 920px !important;
+}
+
+.react-transform-component {
+    width: 100% !important;
+    height: 920px !important;
+    overflow: visible !important;
+}
+
+.react-transform-component>.map {
+    width: 95%;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.map-controls.zoomed {
+    right: 10px;
 }
 
 @media (max-width: 900px) {
@@ -480,15 +502,28 @@ main {
         min-width: 0;
     }
 
+    .react-transform-wrapper {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 1150px !important;
+    }
+
+    .react-transform-component {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 1150px !important;
+        overflow: visible !important;
+    }
+
     .map {
         width: calc(100% - 30px);
         min-height: 1150px;
         height: auto;
         margin: 10px auto;
-        overflow: hidden;
         border-radius: 20px;
         background-size: cover;
         background-position: center;
+        overflow: visible;
     }
 
     .status {
@@ -602,7 +637,7 @@ main {
     .timelineContainer {
         width: calc(100% - 30px);
         left: 15px;
-        bottom: 20px;
+        bottom: -120px;
         height: 190px;
         padding: 15px;
         box-sizing: border-box;
@@ -704,14 +739,31 @@ main {
         width: calc(100% - 70px);
         min-width: 0;
         overflow-x: hidden;
+        overflow-y: visible;
+    }
+
+    .react-transform-wrapper {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        touch-action: pan-y !important;
+    }
+
+    .react-transform-component {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        touch-action: pan-y !important;
     }
 
     .map {
         width: calc(100% - 20px);
-        min-height: 1250px;
-        height: auto;
+        height: 2000px;
+        min-height: 2000px;
         margin: 10px auto;
-        overflow: hidden;
+        overflow: visible;
         border-radius: 18px;
         background-position: center;
         background-size: cover;
@@ -945,13 +997,17 @@ main {
     .stars {
         font-size: 14px;
     }
-    .map-controls{
+
+    .map-controls {
         display: none;
     }
-    
 }
 
 @media (max-width: 450px) {
+    .map {
+        height: 2200px;
+        min-height: 2200px;
+    }
 
     .status {
         grid-template-columns: 1fr;
@@ -973,6 +1029,10 @@ main {
 
     .timeline-bar {
         height: 360px;
+    }
+
+    .stations {
+        top: 105px;
     }
 
     .reward .details {
