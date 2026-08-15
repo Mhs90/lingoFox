@@ -452,6 +452,9 @@ main {
     height: 40px;
     border-radius: 10px;
     font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .zoom-controls {
@@ -467,10 +470,6 @@ main {
     height: 40px;
     font-size: 27px;
     box-shadow: none;
-}
-
-.zoom-controls button:first-child {
-    border-bottom: 1px solid #ddd;
 }
 
 @media (max-width: 900px) {
