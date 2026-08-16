@@ -280,6 +280,7 @@ export default function JourneyPage() {
                                             </p>
                                             <i className="fa-solid fa-lock"></i>
                                         </div>
+                                        <hr />
                                         <div className="journey-task sixthTask">
                                             <div className='numberOfTask'>6</div>
                                             <p className='taskDescription'>

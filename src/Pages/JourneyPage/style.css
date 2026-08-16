@@ -88,6 +88,18 @@ main {
     margin: 5px;
 }
 
+.journeyUnderTitle i {
+    margin-right: 11px;
+}
+
+.journeyUnderTitle .fa-book-open {
+    margin-right: 5px;
+}
+
+.journeyUnderTitle .fa-microphone {
+    margin-right: 12px;
+}
+
 .journeyTitleContainer {
     margin-left: 5px;
     width: 80px;
