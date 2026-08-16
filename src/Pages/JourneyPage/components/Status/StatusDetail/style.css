@@ -1,0 +1,44 @@
+.status-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.journey-badge {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #EDECF9;
+    font-size: 30px;
+    border: 0.5px solid #6662EB;
+    color: #6662EB;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.journey-badge.flag {
+    background-color: #EDECF9;
+    border: 0.5px solid #6662EB;
+    color: #6662EB;
+}
+
+.journey-badge.clock {
+    background-color: #EEFEF0;
+    border: 0.5px solid #58B161;
+    color: #58B161;
+}
+
+.journey-badge.book-open {
+    background-color: #FFF5E3;
+    border: 0.5px solid #F59E0B;
+    color: #F59E0B;
+}
+
+.journey-badge.award {
+    background-color: #E4ECF9;
+    border: 0.5px solid #3b68E3;
+    color: #3b68E3;
+}

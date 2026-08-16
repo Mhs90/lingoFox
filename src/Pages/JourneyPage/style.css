@@ -14,72 +14,12 @@ main {
     margin: 0 auto;
 }
 
-.status {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: white;
-    width: 750px;
-    height: 100px;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    border-radius: 10px;
-    padding: 5px 10px;
-    z-index: 1;
-}
-
-.status-detail {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
 .journeyTitleContainer {
     width: 90px;
 }
 
-.journey-badge {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #EDECF9;
-    font-size: 30px;
-    border: 0.5px solid #6662EB;
-    color: #6662EB;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.journey-badge.flag {
-    background-color: #EDECF9;
-    border: 0.5px solid #6662EB;
-    color: #6662EB;
-}
-
-.journey-badge.clock {
-    background-color: #EEFEF0;
-    border: 0.5px solid #58B161;
-    color: #58B161;
-}
-
-.journey-badge.book {
-    background-color: #FFF5E3;
-    border: 0.5px solid #F59E0B;
-    color: #F59E0B;
-}
-
-.journey-badge.medal {
-    background-color: #E4ECF9;
-    border: 0.5px solid #3b68E3;
-    color: #3b68E3;
-}
-
 .journeyTitle {
     margin: 5px;
-
 }
 
 .journeyUnderTitle {
@@ -108,336 +48,6 @@ main {
 .journeyTitleContainer .journey-title {
     font-weight: bolder;
     font-size: 15px;
-}
-
-.comunication {
-    background-color: white;
-    width: 240px;
-    height: auto;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    border-radius: 10px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
-}
-
-.comunication img {
-    width: 100%;
-}
-
-.comunicationTitle {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.inProgres {
-    width: 70px;
-    padding: 3px 7px;
-    border-radius: 7px;
-    background-color: #706cea3f;
-    border: 1px solid #706cea;
-    color: #706cea;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.bodyParagraph {
-    font-size: 14px;
-}
-
-.journey-progress-bar-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.journey-progress-bar-container span {
-    font-size: 12px;
-    color: #7e7b7b;
-}
-
-.journey-progress-bar {
-    width: 170px;
-    height: 5px;
-    background: #eeeeff;
-    border-radius: 10px;
-    display: inline-block;
-    overflow: hidden;
-}
-
-.journey-progress {
-    width: 5%;
-    height: 100%;
-    background: #5b5ce2;
-    border-radius: 10px;
-}
-
-.comunication button {
-    background-image: linear-gradient(#EA8227, #F59E0B);
-    padding: 5px;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    height: 35px;
-    cursor: pointer;
-}
-
-.reward {
-    border: .5 solid #F59E0B;
-    background-color: #FFF5E3;
-    width: 280px;
-    height: 170px;
-    position: absolute;
-    right: 20px;
-    top: 530px;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.reward-progress-bar {
-    width: 150px;
-    height: 5px;
-    background: #E1E1E1;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.details {
-    width: 60%;
-}
-
-.reward-progress {
-    width: 34%;
-    height: 100%;
-    background: #F59E0B;
-    border-radius: 10px;
-}
-
-.reward img {
-    width: 120px;
-    position: absolute;
-    right: 12px;
-    bottom: 10px;
-}
-
-.description {
-    font-size: 13px;
-    color: #646363;
-}
-
-.progressTitle {
-    font-size: 13px;
-}
-
-.timelineContainer {
-    background-color: #FEFEFE;
-    position: absolute;
-    bottom: -120px;
-    width: 98%;
-    height: 200px;
-    border-radius: 10px;
-    left: 1%;
-    padding: 20px;
-    border: .5px solid #E1E1E1;
-}
-
-.timelineContainer a {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #6662Eb;
-    font-size: 13px;
-}
-
-.timelineTitle {
-    margin-bottom: 10px;
-}
-
-.timeline-bar {
-    width: 85%;
-    height: 5px;
-    border-radius: 10px;
-    display: inline-block;
-    border-top: 3px dashed #646363;
-    position: absolute;
-    left: 7.5%;
-    margin-top: 50px;
-}
-
-.stations {
-    display: flex;
-    flex-direction: row;
-    gap: 13.5%;
-    margin-top: 25px;
-    z-index: 1;
-    margin-left: 4%;
-}
-
-.station {
-    width: 50px;
-    height: 50px;
-    border: .5px solid #6662EB;
-    background-color: #EDECF9;
-    color: #6662EB;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    font-size: 25px;
-}
-
-.success {
-    background-color: #58B161;
-    border: 0.5px solid #58B161;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    color: #EEFEF0;
-    font-size: 8px;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.station p {
-    text-align: center;
-    color: black;
-    font-size: 13px;
-    width: 120px;
-    margin-top: 20px;
-}
-
-.ahead {
-    width: 40%;
-    height: 200%;
-    background: #3b68E3;
-    border-radius: 10px;
-    position: absolute;
-    top: -5px;
-}
-
-.station.close {
-    background-color: #F8FAFC;
-    border: .5px solid #E1E1E1;
-    color: #64748B;
-}
-
-.station.continuing {
-    box-shadow: 0 0 12px #5b5be2b7;
-}
-
-.journey-task {
-    background-color: #F3E0C4;
-    border: 2px solid #FFD392;
-    width: 110px;
-    height: 80px;
-    color: #817B63;
-    border-radius: 15px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.numberOfTask {
-    width: 45px;
-    height: 45px;
-    background-color: #817B63;
-    border: 3px solid #BBBBBB;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -29px;
-}
-
-.foxTopOfContinuing {
-    width: 45px;
-    height: 45px;
-    background-color: #8A38F5;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -94px;
-}
-
-.foxTopOfContinuing img {
-    width: 40px;
-    z-index: 1;
-}
-
-.foxTopOfContinuing::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    right: 14px;
-    width: 15px;
-    height: 15px;
-    background: #8A38F5;
-    transform: rotate(45deg);
-}
-
-.stars {
-    display: flex;
-    flex-direction: row;
-}
-
-.firstTask {
-    bottom: 150px;
-    right: 590px;
-}
-
-.secondTask {
-    bottom: 260px;
-    right: 340px;
-}
-
-.thirdTask {
-    right: 340px;
-    top: 270px;
-}
-
-.forthTask {
-    top: 120px;
-    left: 530px;
-}
-
-.fifthTask {
-    top: 200px;
-    left: 307px;
-}
-
-.sixthTask {
-    top: 400px;
-    left: 100px;
-}
-
-.journey-task.continuingTask .numberOfTask,
-.journey-task.did .numberOfTask {
-    background-color: #8A38F5;
-    border-color: white;
-}
-
-.journey-task p {
-    color: black;
-    font-size: 13px;
-    text-align: center;
-    width: 90px;
-    margin-top: 20px;
-    margin-bottom: 1px;
 }
 
 .map-controls {
@@ -583,7 +193,7 @@ main {
         font-size: 13px;
     }
 
-    .comunication {
+    .adventure {
         width: 220px;
         top: 125px;
         right: 15px;
@@ -592,13 +202,13 @@ main {
         box-sizing: border-box;
     }
 
-    .comunication img {
+    .adventure img {
         width: 100%;
         max-height: 120px;
         object-fit: contain;
     }
 
-    .comunicationTitle {
+    .adventureTitle {
         font-size: 13px;
     }
 
@@ -610,7 +220,7 @@ main {
         width: 140px;
     }
 
-    .comunication button {
+    .adventure button {
         width: 100%;
         height: 32px;
     }
@@ -825,7 +435,7 @@ main {
         margin: 3px;
     }
 
-    .comunication {
+    .adventure {
         position: relative;
         top: auto;
         right: auto;
@@ -836,13 +446,13 @@ main {
         box-sizing: border-box;
     }
 
-    .comunication img {
+    .adventure img {
         width: 100%;
         max-height: 130px;
         object-fit: contain;
     }
 
-    .comunicationTitle {
+    .adventureTitle {
         font-size: 13px;
     }
 
@@ -856,7 +466,7 @@ main {
         max-width: 170px;
     }
 
-    .comunication button {
+    .adventure button {
         width: 100%;
     }
 

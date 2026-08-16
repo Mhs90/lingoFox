@@ -1,0 +1,75 @@
+.adventure {
+    background-color: white;
+    width: 240px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.adventure img {
+    width: 100%;
+}
+
+.adventureTitle {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.inProgres {
+    width: 70px;
+    padding: 3px 7px;
+    border-radius: 7px;
+    background-color: #706cea3f;
+    border: 1px solid #706cea;
+    color: #706cea;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bodyParagraph {
+    font-size: 14px;
+}
+
+.journey-progress-bar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.journey-progress-bar-container span {
+    font-size: 12px;
+    color: #7e7b7b;
+}
+
+.journey-progress-bar {
+    width: 170px;
+    height: 5px;
+    background: #eeeeff;
+    border-radius: 10px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.journey-progress {
+    width: 5%;
+    height: 100%;
+    background: #5b5ce2;
+    border-radius: 10px;
+}
+
+.adventure button {
+    background-image: linear-gradient(#EA8227, #F59E0B);
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 35px;
+    cursor: pointer;
+}

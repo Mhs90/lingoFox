@@ -1,0 +1,84 @@
+.task {
+    border: 1px solid #e2dddd;
+    width: 22%;
+    height: 180px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.badge {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.badge.plane {
+    background-color: #EDECF9;
+    border: 2px solid #DEDDF9;
+    color: #6662EB;
+}
+
+.badge.headphones {
+    background-color: #EEFEF0;
+    border: 2px solid #B9E3BE;
+    color: #58B161;
+}
+
+.badge.microphone {
+    background-color: #FFF5E3;
+    border: 2px solid #f1e5cf;
+    color: #F59E0B;
+}
+
+.badge.rotate-left {
+    background-color: #E4ECF9;
+    border: 2px solid #C6D5F5;
+    color: #3B68E3;
+}
+
+.progress-bar-container {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 210px;
+}
+
+.progress-bar {
+    width: 150px;
+    height: 5px;
+    background: #eeeeff;
+    border-radius: 10px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.progress {
+    width: 5%;
+    height: 100%;
+    background: #5b5ce2;
+    border-radius: 10px;
+}
+
+.progress-bar-container span {
+    font-size: 10px;
+    color: #8b8b8b;
+    margin-left: 5px;
+}
+
+.progress-bar-container button {
+    all: unset;
+    display: block;
+    width: 175px;
+    height: 25px;
+    border: 1px solid #bcbae0;
+    color: #7874db;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
