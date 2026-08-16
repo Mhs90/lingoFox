@@ -38,14 +38,13 @@ export default function JourneyPage() {
                     maxScale={isMobile ? 1 : 3}
                     centerOnInit={true}
                     wheel={{
-                        disabled: isMobile,
-                        step: 0.1
+                        disabled: true,
                     }}
                     pinch={{
-                        disabled: isMobile
+                        disabled: !isMobile
                     }}
                     doubleClick={{
-                        disabled: isMobile
+                        disabled: true
                     }}
                     panning={{
                         disabled: isMobile
