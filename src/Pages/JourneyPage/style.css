@@ -442,8 +442,8 @@ main {
 
 .map-controls {
     position: absolute;
-    right: 20%;
-    top: 60%;
+    right: 17%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
     display: flex;
@@ -1053,5 +1053,11 @@ main {
 
     .reward img {
         width: 90px;
+    }
+}
+
+@media (max-width : 1800px) {
+    .map-controls {
+        right: 20%;
     }
 }
