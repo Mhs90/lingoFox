@@ -69,7 +69,7 @@ export default function JourneyPage() {
                                     <div className="journey-tasks">
                                         <Task text="Welcome To The Village" numberOftask={1} numberOfStars={3} condition='did' />
                                         <Task text="Restauarant Explore" numberOftask={2} numberOfStars={2} condition='did' />
-                                        <Task text="Travel Communication" numberOftask={3} numberOfStars={1} condition='continuingTask' />
+                                        <Task text="Travel Communication" numberOftask={3} numberOfStars={0} condition='continuingTask' />
                                         <Task text="Check-In-Hotel" numberOftask={4} condition='' />
                                         <Task text="Ask For Direction" numberOftask={5} condition='' />
                                         <Task text="Shopping Explore" numberOftask={6} condition='' />
