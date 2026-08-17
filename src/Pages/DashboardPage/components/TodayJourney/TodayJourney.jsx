@@ -14,10 +14,9 @@ export default function TodayJourney() {
             </header>
             <div className="tasks">
                 <Task icon="plane" title='Airport Explore' text='12 New Words' progressText="0/10" />
-                <Task icon="headphones" title='>Travel Listening' text='5 Minutes' progressText="5 min" />
+                <Task icon="headphones" title='Travel Listening' text='5 Minutes' progressText="5 min" />
                 <Task icon="microphone" title='Check-In-Conversation' text='Speaking Practice' progressText="5 min" />
                 <Task icon="rotate-left" title='Word Reveiw' text='25 Words' progressText="" />
-                
             </div>
         </div>
     )
