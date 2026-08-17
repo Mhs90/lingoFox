@@ -1,5 +1,3 @@
-import './style.css'
-
 export default function Task({ numberOftask, condition, text, numberOfStars }) {
     return (
         <div className={`journey-task ${numberOftask === 1 ? 'firstTask'

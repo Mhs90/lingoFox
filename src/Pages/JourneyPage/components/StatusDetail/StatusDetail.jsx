@@ -1,5 +1,3 @@
-import './style.css'
-
 export default function StatusDetail({ icon, title, text }) {
     return (
         <div className="status-detail">

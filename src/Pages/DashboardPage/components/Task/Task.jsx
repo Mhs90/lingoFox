@@ -1,5 +1,3 @@
-import './style.css'
-
 export default function Task({ icon, title, text, progressText }) {
     return (
         <div className="task">

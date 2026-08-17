@@ -1,5 +1,3 @@
-import './style.css'
-
 export default function Station({ text, icon, condition }) {
     return (
         <div className={`station ${condition === 'success' || condition}`}>
