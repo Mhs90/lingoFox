@@ -24,7 +24,7 @@ export default function Task({ numberOftask, condition, text, numberOfStars }) {
                     <div className="stars">
                         <span style={{ color: `${numberOfStars >= 1 ? '#FAC747' : '#EBAD76'} ` }}>{numberOfStars >= 1 ? '★' : '☆'}</span>
                         <span style={{ color: `${numberOfStars >= 2 ? '#FAC747' : '#EBAD76'} ` }}>{numberOfStars >= 2 ? '★' : '☆'}</span>
-                        <span style={{ color: `${numberOfStars === 1 ? '#FAC747' : '#EBAD76'} ` }}>{numberOfStars === 3 ? '★' : '☆'}</span>
+                        <span style={{ color: `${numberOfStars === 3 ? '#FAC747' : '#EBAD76'} ` }}>{numberOfStars === 3 ? '★' : '☆'}</span>
                     </div> :
                     <i className="fa-solid fa-lock"></i>
             }
