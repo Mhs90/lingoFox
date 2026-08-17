@@ -10,7 +10,7 @@ export default function TodayJourney() {
                     <p className="title">Today's Journey</p>
                     <p className="underTitle">Small steps for meanigful progress.</p>
                 </div>
-                <Link to="/journey" href="#">view full jurney <i className="fa-solid fa-arrow-right"></i></Link>
+                <Link to="/journey">view full jurney <i className="fa-solid fa-arrow-right"></i></Link>
             </header>
             <div className="tasks">
                 <Task icon="plane" title='Airport Explore' text='12 New Words' progressText="0/10" />
