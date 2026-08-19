@@ -1,58 +1,29 @@
 main {
-    margin-left: 240px;
+    margin-right: 240px;
     min-height: 100vh;
 }
 
-header {
+/* -----------------------today adventure ------------------- */
+.wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px 30px;
-}
-
-.messages {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    color: #5550f3;
-    cursor: pointer;
-}
-
-.profile {
-    display: flex;
-    align-items: center;
-    width: 110px;
-    height: 45px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.profile img {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    flex-shrink: 0;
 }
 
 .messageBox {
-    background-image: linear-gradient(#9997dc, #5550f3);
-    width: 650px;
+    background-image:
+        linear-gradient(to left, rgba(30, 30, 30, 0.7),
+            rgba(47, 47, 47, 0.4),
+            rgba(245, 245, 245, 0.1)),
+        url('/public/assets/e407d59b107ae33963a1e2c2713cc139d6119216.png');
+    width: 791px;
     border-radius: 10px;
     color: #e9e8f6;
-    display: inline-flex;
-    margin: 10px 5px 5px 40px;
-    height: 400px;
-}
-
-.greet {
-    margin-bottom: 60px;
+    margin: 10px 40px 30px 40px;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .left {
@@ -63,28 +34,19 @@ header {
     margin: 30px 0 10px 0;
 }
 
-.left div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #e9e8f6;
-    color: #5550f3;
-    width: 200px;
-    height: 30px;
-    border-radius: 7px
-}
-
 .left button {
-    margin-top: 60px;
-    height: 40px;
-    width: 180px;
+    position: absolute;
+    height: 45px;
+    width: 190px;
     font-size: 15px;
+    font-weight: 500;
     background-image: linear-gradient(#EE8A21, #F09119, #F39812);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 5px;
     color: #e9e8f6;
     cursor: pointer;
+    bottom: 8%;
 }
 
 .right {
@@ -92,66 +54,81 @@ header {
 }
 
 .right img {
-    margin-right: 20px;
-    width: 228px;
-}
-
-.message {
-    position: relative;
-    background-color: #e9e8f6;
-    width: 200px;
-    height: 130px;
-    border-radius: 20px;
-    margin-top: 20px;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-}
-
-.message::after {
-    content: "";
+    width: 171px;
     position: absolute;
-    bottom: -5px;
-    right: 50px;
-    width: 10px;
-    height: 10px;
-    background: #e9e8f6;
-    transform: rotate(45deg);
+    transform: rotate(20deg);
+    bottom: -35px;
+    left: 10px;
 }
 
-.message span {
-    font-size: inherit;
+.left .adventure {
+    margin: 20px;
+    color: #FAC747;
+    font-size: 24px;
+    font-weight: 500;
 }
 
-.quoteTitle {
-    font-size: 13px;
-    margin-bottom: 10px;
+.left h1 {
+    font-size: 32px;
+    font-weight: 600;
 }
 
-.quote {
+.left .note {
+    font-weight: 500;
+    width: 300px;
+}
+
+.banners {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.banner {
+    width: 147px;
+    height: 73px;
+    border-radius: 8px;
+    background-color: #64748bce;
+    border: 0.1px solid #e1e1e1c5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.banner img {
+    width: 24px;
+    height: 24px;
+}
+
+.banner .up {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FBFBFB;
+}
+
+.banner .down {
     font-size: 12px;
+    font-weight: 400;
+    color: #FBFBFB;
 }
 
-.quote span {
-    color: #5550f3;
-}
+/* -----------------------snap shot ------------------- */
 
 .progress-circle {
-    width: 70px;
-    height: 70px;
+    width: 57px;
+    height: 57px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto
 }
 
 .progress-circle::before {
     content: "";
-    width: 58px;
-    height: 58px;
+    width: 50px;
+    height: 50px;
     background: white;
     border-radius: 50%;
     position: absolute;
@@ -164,190 +141,228 @@ header {
     font-weight: bold;
 }
 
-
 .snapshot {
-    border: 1px solid rgb(238, 237, 237);
-    display: inline-flex;
+    border: 0.7px solid #E1E1E1;
+    display: flex;
     flex-direction: column;
-    width: 550px;
+    width: 338px;
     border-radius: 10px;
-    height: 400px;
+    height: 420px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.snapshot header {
+.snapshot .header {
+    position: relative;
     display: flex;
     flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    width: 290px;
+    height: 49px;
+    border-bottom: 0.7px solid #E1E1e1;
+    padding-top: 50px;
 }
 
-.snapshot header a {
+.snapshot .header a {
     color: #5550f3;
-    font-size: 15px;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+}
+
+.snapshot .header p {
+    color: #0F172A;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    right: 0;
+}
+
+.snapshot hr {
+    width: 290px;
+    margin: 0 auto;
+    border-color: #fffefe3f;
 }
 
 .main {
     display: flex;
-    gap: 15px;
-    padding: 10px;
+    flex-direction: column;
+    margin: 10px;
+    gap: 30px;
+    width: 80%;
+    width: auto;
 }
 
-.main div span {
-    font-size: 10px;
-}
-
-.vocabulary {
-    display: inline-block;
-    height: 320px;
-    width: 280px;
-    border: 1px solid #e2dddd;
-    border-radius: 10px;
-    text-align: left;
-    padding: 20px;
-}
-
-.condition {
-    width: 72px;
-    padding: 3px 7px;
-    border-radius: 5px;
-    background-color: #706cea3f;
-    border: 1px solid #706cea;
-    color: #706cea;
-    font-size: 10px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 5px
-}
-
-.number {
-    font-size: 30px;
-    margin: 10px 10px;
-}
-
-.learned {
-    color: #bbb6b6;
-    font-size: 13px;
-}
-
-.speakingAndListening {
-    display: inline-block;
-    height: 153px;
-    width: 170px;
-    border: 1px solid #e2dddd;
-    border-radius: 10px;
-    text-align: left;
-    padding: 20px;
-    margin-right: 5px;
-}
-
-.today {
-    color: lightseagreen;
-    font-size: 13px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.underTitle {
-    color: #bbb6b6;
-    font-size: 12px;
-}
-
-.thisMonth {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 12px
+.main .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: 25%;
 }
 
 .green {
-    color: lightseagreen;
+    color: #58B161;
+    font-size: 10px;
+    margin-right: 20px;
 }
 
-.grammer {
-    border: 1px solid #bbb6b6;
-    display: inline-block;
-    height: 150px;
-    width: 340px;
-    border: 1px solid #e2dddd;
-    border-radius: 10px;
-    text-align: left;
-    padding: 20px;
-    margin-top: 15px;
+.learned {
+    color: #0F172a;
+    font-size: 12px;
+    font-weight: 400;
 }
 
-.rightColumn {
+.level {
+    color: #64748B;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.detailAndProgress {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 15px;
 }
 
-.titleContainer {
-    margin-right: auto;
+.badgeAndTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.titleContainer .underTitle {
-    font-size: 13px;
-    margin-top: 10px;
+.row .badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.row .badge.active-book-icon {
+    background-color: #EDECF9;
+    border: solid 1px #3b68e34b;
+}
+
+.row .badge.microphone {
+    background-color: #EEFEF0;
+    border: solid 1px #58b16146;
+}
+
+.row .badge.headphone {
+    background-color: #E4ECF9;
+    border: solid 1px #3b68e346;
+}
+
+.row .badge.message {
+    background-color: #FFF5E3;
+    border: solid 1px #F59E0B46;
+}
+
+.row .badge img {
+    width: 16px;
+}
+
+/* ----------------today journey -------------------- */
+
+.todayJourney header {
+    height: 50px;
+    position: absolute;
 }
 
 .todayJourney a {
     color: #5550f3;
-    font-size: 15px;
+    font-weight: 500;
+    font-size: 12px;
 }
 
 .todayJourney {
     border: 1px solid rgb(238, 237, 237);
+    position: relative;
     width: 94%;
-    margin: 10px auto;
+    margin: 10px 40px 10px 40px;
     border-radius: 10px;
-    height: 280px;
+    width: 791px;
+    height: 287px;
+    padding: 20px;
+}
+
+.headerTitleContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.headerTitleContainer .title {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.headerTitleContainer .underTitle {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #64748B;
 }
 
 .tasks {
+    margin-top: 90px;
     display: flex;
     flex-direction: row;
-    gap: 1.5%;
     justify-content: center;
+    align-items: center;
+}
+
+.tasks img {
+    width: 30px;
+    height: 60px;
 }
 
 .task {
     border: 1px solid #e2dddd;
-    width: 22%;
-    height: 180px;
+    width: 163px;
+    height: 163px;
     border-radius: 10px;
     position: relative;
-}
-
-.badge {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+.task header {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    font-size: 30px;
-    margin-right: 20px;
 }
 
-.badge.plane {
-    background-color: #EDECF9;
-    border: 2px solid #DEDDF9;
-    color: #6662EB;
+.task .titleContainer {
+    width: 100%;
+    text-align: center;
 }
 
-.badge.headphones {
-    background-color: #EEFEF0;
-    border: 2px solid #B9E3BE;
-    color: #58B161;
+.task .titleContainer .title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0F172A;
+    text-align: center;
 }
 
-.badge.microphone {
-    background-color: #FFF5E3;
-    border: 2px solid #f1e5cf;
-    color: #F59E0B;
+.task .titleContainer .underTitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: #64748B;
+    text-align: center;
 }
 
-.badge.rotate-left {
-    background-color: #E4ECF9;
-    border: 2px solid #C6D5F5;
-    color: #3B68E3;
+.task img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 55%;
 }
 
 .progress-bar-container {
@@ -358,19 +373,52 @@ header {
 }
 
 .progress-bar {
-    width: 150px;
-    height: 5px;
-    background: #eeeeff;
+    width: 110px;
+    height: 2px;
     border-radius: 10px;
     display: inline-block;
     overflow: hidden;
+    background-color: #EDECF9;
+}
+
+.progress-bar.message {
+    background-color: #f59f0b46;
+}
+
+.progress-bar.headphone {
+    background-color: #3b68e346;
+}
+
+.progress-bar.microphone {
+    background-color: #58b16146;
+}
+
+.progress-bar.plane {
+    background-color: #6662eb46;
 }
 
 .progress {
-    width: 5%;
+    width: 8%;
     height: 100%;
-    background: #5b5ce2;
     border-radius: 10px;
+    float: left;
+    background-color: #6662EB;
+}
+
+.progress.message {
+    background-color: #F59E0B;
+}
+
+.progress.headphone {
+    background-color: #3B68E3;
+}
+
+.progress.microphone {
+    background-color: #58B161;
+}
+
+.progress.plane {
+    background-color: #6662EB;
 }
 
 .progress-bar-container span {
@@ -379,43 +427,56 @@ header {
     margin-left: 5px;
 }
 
-.progress-bar-container button {
-    all: unset;
-    display: block;
-    width: 175px;
-    height: 25px;
-    border: 1px solid #bcbae0;
-    color: #7874db;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 10px;
-    cursor: pointer;
+.task.message {
+    border: 1px solid #f59f0b69;
+    background-color: #FFF5E3;
 }
 
-.titleContainer .title {
-    font-size: 13px;
+.task.headphone {
+    border: 1px solid #3b68e34b;
+    background-color: #E4ECF9;
 }
 
-.lastRow {
+.task.microphone {
+    border: 1px solid #58B16169;
+    background-color: #EEFEF0;
+}
+
+.task.plane {
+    border: 1px solid #6662eb69;
+    background-color: #EDECF9;
+}
+
+.second-wrapper {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
+/* ------------------continue learning---------------------- */
+
 .continue {
-    border: 1px solid #bbb6b6;
     display: inline-block;
-    height: auto;
-    width: 360px;
+    height: 287px;
+    width: 338px;
     border: 1px solid rgb(238, 237, 237);
     border-radius: 10px;
     text-align: left;
-    padding: 15px;
-    margin: 10px 5px 5px 40px;
+    padding: 10px;
 }
 
 .continue-header {
     display: flex;
-    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.continue-header .title {
+    position: absolute;
+    right: 10px;
+    top: 1px;
 }
 
 .inProgress {
@@ -427,9 +488,14 @@ header {
     color: #706cea;
     font-size: 10px;
     font-weight: bold;
+    position: absolute;
+    left: 10px;
+    top: 1px;
 }
 
 .detailsContainer img {
+    width: 120px;
+    height: 206px;
     margin: 10px;
 }
 
@@ -441,20 +507,29 @@ header {
 .details {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     margin: 10px;
 }
 
 .continueBtn {
     all: unset;
-    width: 170px;
-    height: 25px;
+    width: 150px;
+    height: 27px;
     border: 1px solid #bcbae0;
     color: #7874db;
-    border-radius: 3px;
+    border-radius: 4px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     cursor: pointer;
+}
+
+.details .underTitle {
+    color: #64748B;
+    font-size: 12px;
+    text-align: right;
+    padding: 2px;
 }
 
 .detailsContainer .progressbarContainer {
@@ -468,13 +543,22 @@ header {
     color: #8b8b8b;
 }
 
+.third-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 30px;
+    padding: 0 40px;
+}
+
+/* -----------------------words chart---------------------- */
+
 .words {
-    width: 490px;
-    height: 280px;
+    width: 385px;
+    height: 230px;
     border: 1px solid rgb(238, 237, 237);
     border-radius: 10px;
     padding: 15px 18px;
-    margin: 10px 5px 5px 20px;
 }
 
 .words-header {
@@ -507,7 +591,7 @@ header {
 
 .chart {
     width: 100%;
-    height: 200px;
+    height: 145px;
     margin-top: 15px;
 }
 
@@ -546,14 +630,114 @@ header {
     stroke-linejoin: round;
 }
 
-.insight {
-    box-sizing: border-box;
-    width: 490px;
-    height: 280px;
+/* --------------------library------------------------- */
+
+.libraryContainer {
+    width: 385px;
+    height: 230px;
     border: 1px solid rgb(238, 237, 237);
     border-radius: 10px;
-    padding: 15px 18px;
-    margin: 10px 40px 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.libraryContainer header {
+    position: relative;
+}
+
+.libraryContainer .headerTitleContainer {
+    top: 10px;
+    right: 10px;
+}
+
+.libraryContainer header a {
+    color: #5550f3;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.shelf {
+    width: 352px;
+    height: 140px;
+    border-radius: 12px;
+    background-image: url('/public/assets/library.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px 42px 9px 42px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.book {
+    width: 71px;
+    height: 106px;
+    background-size: cover;
+    margin-bottom: -13px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.book.next {
+    height: 100px;
+    border: 1px dashed #F3E0C4;
+    border-radius: 5px;
+    padding: 11px 10px 11px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book.next p {
+    font-size: 8px;
+    color: #FBFBFB;
+    text-align: center;
+}
+
+.book.next img {
+    width: 20px;
+}
+
+.book .top {
+    font-size: 6px;
+    color: #d3d3d3;
+    width: 20px;
+    border-bottom: 1px solid #d3d3d3;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.book .title {
+    color: #FBFBFB;
+    font-size: 9px;
+}
+
+.book .level {
+    color: #fbfbfb93;
+    font-size: 6px;
+}
+
+.book .writer{
+    color: #fbfbfb93;
+    font-size: 5px;
+}
+
+/* ----------------------nox insight---------------------- */
+
+.insight {
+    box-sizing: border-box;
+    width: 343px;
+    height: 230px;
+    border: 1px solid rgb(238, 237, 237);
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
 }
 
 .insight-header {
@@ -562,36 +746,40 @@ header {
     justify-content: space-between;
 }
 
-.insight-header a {
-    color: #5b5ce2;
-    font-size: 13px;
+.talking img{
+    position: absolute;
+    bottom: 0;
+    left: 15px;
 }
 
 .talking {
     display: flex;
+    flex-direction: row-reverse;
     margin-top: 60px;
 }
 
 .secondMessage {
-    position: relative;
+    position: absolute;
     background-color: #e9e8f6;
-    width: 200px;
-    height: 170px;
+    width: 176px;
+    height: 102px;
     border-radius: 40px;
     margin-left: 30px;
     color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 10px;
-    gap: 20px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 70px;
 }
 
 .secondMessage::after {
     content: "";
     position: absolute;
     bottom: 40px;
-    right: 190px;
+    right: 165px;
     width: 20px;
     height: 20px;
     background: #e9e8f6;
@@ -602,12 +790,26 @@ header {
     z-index: 1;
 }
 
+.insight button{
+    all: unset;
+    width: 150px;
+    height: 27px;
+    border: 1px solid #bcbae0;
+    color: #7874db;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+}
+
 footer {
     display: flex;
     justify-content: center;
     color: #817f7f;
     font-size: 15px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 @media (max-width: 900px) {

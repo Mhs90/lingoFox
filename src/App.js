@@ -6,6 +6,9 @@ import SpeakingPage from "./Pages/SpeakingPage";
 import ListeningPage from "./Pages/ListeningPage";
 import ProgressPage from "./Pages/ProgressPage";
 import AIPage from "./Pages/AIPage";
+import LibraryPage from "./Pages/LibraryPage";
+import SettingPage from "./Pages/SettingPage";
+import HelpPage from "./Pages/HelpPage/HelpPage";
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
       <Route path="/listening" element={<ListeningPage />} />
       <Route path="/progress" element={<ProgressPage />} />
       <Route path="/ai" element={<AIPage />} />
+      <Route path="/library" element={<LibraryPage />} />
+      <Route path="/setting" element={<SettingPage />} />
+      <Route path="/help" element={<HelpPage />} />
     </Routes>
 
   );

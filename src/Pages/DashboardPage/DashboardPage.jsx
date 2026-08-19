@@ -3,130 +3,203 @@ import './style.css'
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 import Task from "./components/Task/Task";
+import { useState } from "react";
 
 export default function DashboardPage() {
+    const [lastDay, setLastDay] = useState(30)
     return (
         <>
             <SideBar autoActiveItem="dashboard" />
             <main>
                 <Header />
-                <div className="messageBox">
-                    <div className="left">
-                        <p className="greet">Welcome Back Daria !👋</p>
-                        <h1>Your next adventure is waiting.</h1>
-                        <p className="note">Today's focus :</p>
-                        <div>
-                            <i className="fa-solid fa-plane"></i> Travel Communication
+                <div className="wrapper">
+
+                    <div className="messageBox">
+                        <div className="left">
+                            <p className="adventure">✨ ماجراجویی امروز</p>
+                            <h1>در فرودگاه ✈️</h1>
+                            <p className="note">باهم یاد میگیریم چطور آدرس بپرسیم و مقصدمون رو مشخص کنیم!</p>
+                            <div className="banners">
+                                <div className="banner">
+                                    <img src="/assets/mic-banner.png" alt="" />
+                                    <div className="text">
+                                        <p className="up">15 دقیقه</p>
+                                        <p className="down">زمان تقریبی</p>
+                                    </div>
+                                </div>
+                                <div className="banner">
+                                    <img src="/assets/book-banner.png" alt="" />
+                                    <div className="text">
+                                        <p className="up">12 واژه جدید</p>
+                                        <p className="down">واژگان اصلی</p>
+                                    </div>
+                                </div>
+                                <div className="banner">
+                                    <img src="/assets/clock-banner.png" alt="" />
+                                    <div className="text">
+                                        <p className="up">مهارت گفتاری</p>
+                                        <p className="down">مهارت اصلی</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <Link to="/journey"><button>شروع ماجراجویی  ◀</button></Link>
                         </div>
-                        <button>Start Today's Journey</button>
+                        <div className="right">
+                            <img src="/assets/second-fox.png" alt="fox" />
+                        </div>
                     </div>
-                    <div className="right">
-                        <div className="message">
-                            <p className="quoteTitle">Nox says :</p>
-                            <p className="quote">You learned <span>24 new words</span> this week</p>
+                    <div className="snapshot">
+                        <header className="header">
+                            <p className="title">این هفته با تو</p>
+                            <Link to="/progress">مشاهده پیشرفت <i className="fa-solid fa-arrow-left"></i></Link>
+                        </header>
+                        <div className="main">
+                            <div className="row">
+                                <div className="badge active-book-icon"><img src="/assets/active-book-icon.png" alt="" /></div>
+                                <div className="textContainer">
+                                    <p className="learned">30 واژه یاد گرفتی</p>
+                                    <p className="level">سطح متوسط</p>
+                                </div>
+                                <div className="detailAndProgress">
+                                    <p className="green">12 واژه جدید امروز!</p>
+                                    <div className="progress-circle"
+                                        style={{ background: 'conic-gradient(#5b5ce2 0deg 288deg, #eeeeff 288deg 360deg)' }}>
+                                        <span>80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="badge microphone"><img src="/assets/microphone.png" alt="" /></div>
+                                <p className="learned">3 جلسه گفتاری</p>
+                                <div className="detailAndProgress">
+                                    <p className="green">1 جلسه گفتاری امروز!</p>
+                                    <div className="progress-circle"
+                                        style={{ background: 'conic-gradient(#5b5ce2 0deg 230.4deg, #eeeeff 230.4deg 360deg)' }}>
+                                        <span>64%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="badgeAndTitle">
+                                    <div className="badge headphone"><img src="/assets/headphone.png" alt="" /></div>
+                                    <p className="learned">3 جلسه شنیداری</p></div>
+                                <div className="detailAndProgress">
+                                    <div className="progress-circle"
+                                        style={{ background: 'conic-gradient(#5b5ce2 0deg 259.2deg, #eeeeff 259.2deg 360deg)' }}>
+                                        <span>72%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="badgeAndTitle">
+                                    <div className="badge message"><img src="/assets/message.png" alt="" /></div>
+                                    <p className="learned">1 مکالمه داشتی</p></div>
+                                <div className="detailAndProgress">
+                                    <div className="progress-circle"
+                                        style={{ background: 'conic-gradient(#5b5ce2 0deg 194.4deg, #eeeeff 194.4deg 360deg)' }}>
+                                        <span>54%</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <img src="/assets/second-fox.png" alt="fox" />
                     </div>
                 </div>
-                <div className="snapshot">
-                    <header>
-                        <p className="title">Your Snapshot</p>
-                        <a href="#">view all</a>
-                    </header>
-                    <div className="main">
-                        <div className="vocabulary">
-                            <p className="divTitle">
-                                Vocabulary
-                            </p>
-                            <div className="condition">Intermediate</div>
-                            <p className="number">700</p>
-                            <p className="learned">Words Learned</p>
-                            <p className="today">+12 Today</p>
-                            <div className="progress-circle"
-                                style={{ background: 'conic-gradient(#5b5ce2 0deg 288deg, #eeeeff 288deg 360deg)' }}>
-                                <span>80%</span>
+                <div className="second-wrapper">
+
+                    <div className="todayJourney">
+                        <header>
+                            <div className="headerTitleContainer">
+                                <p className="title">مسیر امروز</p>
+                                <p className="underTitle">مسیری که برای امروز در پیش داری</p>
                             </div>
-                        </div>
-                        <div className="rightColumn">
-                            <div className="speakingAndListening">
-                                <p className="divTitle">Speaking</p>
-                                <p className="underTitle">Upper Beginer</p>
-                                <div className="progress-circle"
-                                    style={{ background: 'conic-gradient(#5b5ce2 0deg 259.2deg, #eeeeff 259.2deg 360deg)' }}>
-                                    <span>72%</span>
-                                </div>
-                                <p className="thisMonth"><span className="green">+4</span> this month</p>
-                            </div>
-                            <div className="speakingAndListening">
-                                <p className="divTitle">Listening</p>
-                                <p className="underTitle">Upper Intemediate</p>
-                                <div className="progress-circle"
-                                    style={{ background: 'conic-gradient(#5b5ce2 0deg 230.4deg, #eeeeff 230.4deg 360deg)' }}>
-                                    <span>64%</span>
-                                </div>
-                                <p className="thisMonth"><span className="green">+3</span> this month</p>
-                            </div>
-                            <div className="grammer">
-                                <p className="divTitle">Grammer</p>
-                                <p className="underTitle">Intemediate</p>
-                                <div className="progress-circle"
-                                    style={{ background: 'conic-gradient(#5b5ce2 0deg 194.4deg, #eeeeff 194.4deg 360deg)' }}>
-                                    <span>54%</span>
-                                </div>
-                                <p className="thisMonth"><span className="green">+3</span> this month</p>
-                            </div>
+                            <Link to="/journey" href="#">مشاهده مسیر کامل <i className="fa-solid fa-arrow-left"></i></Link>
+                        </header>
+                        <div className="tasks">
+                            <Task icon="plane" title='واژگان فرودگاه' text='12 واژه جدید' progressText="0/12" />
+                            <img src="/assets/dashed-line.png" alt="" />
+                            <Task icon="microphone" title='تمرین گفتاری' text='5 دقیقه' progressText="5 دقیقه" />
+                            <img src="/assets/second-dashed-line.png" alt="" />
+                            <Task icon="headphone" title='تمرین شنیداری' text='5 دقیقه' progressText="5 دقیقه" />
+                            <img src="/assets/dashed-line.png" alt="" />
+                            <Task icon="message" title='مکالمه در فرودگاه' text='چیزهایی که یادگرفتی رو مرور کن!' progressText="5 دقیقه" />
                         </div>
                     </div>
-                </div>
-                <div className="todayJourney">
-                    <header>
-                        <div className="titleContainer">
-                            <p className="title">Today's Journey</p>
-                            <p className="underTitle">Small steps for meanigful progress.</p>
-                        </div>
-                        <Link to="/journey" href="#">view full jurney <i className="fa-solid fa-arrow-right"></i></Link>
-                    </header>
-                    <div className="tasks">
-                        <Task icon="plane" title='Airport Explore' text='12 New Words' progressText="0/10" />
-                        <Task icon="headphones" title='Travel Listening' text='5 Minutes' progressText="5 min" />
-                        <Task icon="microphone" title='Check-In-Conversation' text='Speaking Practice' progressText="5 min" />
-                        <Task icon="rotate-left" title='Word Reveiw' text='25 Words' progressText="" />
-                    </div>
-                </div>
-                <div className="lastRow">
                     <div className="continue">
                         <div className="continue-header">
-                            <p className="title">Continuue Learning</p>
-                            <div className="inProgress">In Progres</div>
+                            <p className="title">ادامه یادگیری</p>
+                            <div className="inProgress">در حال انجام</div>
                         </div>
                         <div className='detailsContainer'>
-                            <img src="/assets/foxEating.png" alt="fox eating" className="continueImg" />
                             <div className="details">
-                                <p className="secondTitle">Restaurant Explore</p>
+                                <p className="secondTitle">در رستوران 🍜</p>
                                 <div className="progressbarContainer">
-                                    <div className="progress-bar">
+                                    <span>80%</span><div className="progress-bar">
                                         <div style={{ width: '80%' }} className="progress"></div>
-                                    </div><span>80%</span>
+                                    </div>
                                 </div>
                                 <p className="underTitle">
-                                    20% Of Our Previous Adventure Remains!
+                                    هنوز یک مرحله از ماجراجویی قبلی مونده!
                                 </p>
-                                <button className="continueBtn">Continue <i className="fa-solid fa-arrow-right"></i></button>
+                                <Link to="/journey"><button className="continueBtn">ادامه <i className="fa-solid fa-arrow-left"></i></button></Link>
+                            </div>
+                            <img src="/assets/foxEating.png" alt="fox eating" className="continueImg" />
+                        </div>
+                    </div>
+                </div>
+                <div className="third-wrapper">
+                    <div className="insight">
+                        <div className="insight-header">
+                            <p className="title">ناکس چیزی برات داره!</p>
+                        </div>
+                        <div className="talking">
+                            <img src="/assets/foxLamp.png" alt="fox" />
+                            <div className="secondMessage">
+                                <p>چندتا واژه جدید هفته پیش یاد گرفتی، بیا باهاشون جمله بسازیم و مکالمه داشته باشیم!</p>
+                            </div>
+                        </div>
+                        <Link to="/ai"><button><i class="fa-regular fa-comment-dots"></i>  مکالمه با ناکس</button></Link>
+                    </div>
+                    <div className="libraryContainer">
+                        <header>
+                            <div className="headerTitleContainer">
+                                <p className="title">کتابخانه تو</p>
+                                <p className="underTitle">مشاهده کتابخانه</p>
+                            </div>
+                            <Link to="/library">مشاهده کتابخانه <i className="fa-solid fa-arrow-left"></i></Link>
+                        </header>
+                        <div className="shelf">
+                            <div className="book" style={{ backgroundImage: "url('/assets/brown-book.png')" }}>
+                                <div className="description">
+                                    <p className="top">نقشه 1</p>
+                                    <p className="title">اولین روز ها در مدرسه</p>
+                                    <p className="level">HSK1</p>
+                                </div>
+                                <p className="writer">نوشته  شده توسط داریا</p>
+                            </div>
+                            <div className="book" style={{ backgroundImage: "url('/assets/green-book.png')" }}>
+                                <div className="description">
+                                    <p className="top">نقشه 1</p>
+                                    <p className="title"> گشت و گذار در مدرسه</p>
+                                    <p className="level">HSK1</p>
+                                </div>
+                                <p className="writer">نوشته  شده توسط داریا</p></div>
+                            <div className="book next">
+                                <img src="/assets/book-banner.png" alt="book" />
+                                <p>کتاب بعدی در حال ساخته شدن توسط تو هست</p>
                             </div>
                         </div>
                     </div>
                     <div className="words">
-
                         <div className="words-header">
                             <div>
-                                <div className="title">Words Learned</div>
-                                <div className="subtitle">Last 30 days</div>
+                                <div className="title">واژه هایی که یاد گرفتی</div>
+                                <div className="subtitle">در {lastDay} روز گذشته</div>
                             </div>
 
-                            <select>
-                                <option>30 days</option>
-                                <option>7 days</option>
-                                <option>90 days</option>
+                            <select onChange={(e) => setLastDay(e.target.value)}>
+                                <option>30 روز</option>
+                                <option>7 روز</option>
+                                <option>90 روز</option>
                             </select>
                         </div>
 
@@ -218,23 +291,8 @@ export default function DashboardPage() {
                         </div>
 
                     </div>
-                    <div className="insight">
-                        <div className="insight-header">
-                            <p className="title">Nox Insight</p>
-                            <a href="#">see more insights <i className="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                        <div className="talking">
-                            <img src="/assets/foxLamp.png" alt="fox" />
-                            <div className="secondMessage">
-                                <p>You perform better with listening experiences.</p>
-                                <p className="underTitle">
-                                    keep it up! your listening score has improved 18% this month.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <footer>♡ Every adventure brings you closer to your goals</footer>
+                </div >
+                <footer>♡  یادت نره! لازم نیست کامل باشی،فقط ادامه بده. هر قدم کوچیک تو رو به هدفت نزدیک تر میکنه! </footer>
             </main>
         </>
     )

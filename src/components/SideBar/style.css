@@ -1,19 +1,21 @@
 .sidebar {
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 240px;
     height: 100vh;
     padding: 20px 16px;
-    border-right: 1px solid #eeeeee;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
     background-color: white;
 }
 
 .logo {
-    width: 130px;
-    margin: 15px 0 35px 10px;
+    width: 200px;
+    margin: 15px 0 0px 10px;
+    
 }
 
 .menuContainer {
@@ -24,6 +26,7 @@
 
 .menu {
     display: flex;
+    flex-direction: row;
     align-items: center;
     list-style: none;
     width: 100%;
@@ -33,6 +36,8 @@
     color: #8b8b8b;
     cursor: pointer;
     transition: 0.2s;
+    font-size: 'Vazirmatn';
+    font-weight: 500;
 }
 
 .menu:hover {
@@ -44,59 +49,16 @@
     color: #706cea;
 }
 
-.new {
-    margin-left: auto;
-    padding: 3px 7px;
-    border-radius: 5px;
-    background-color: #706cea3f;
-    border: 1px solid #706cea;
-    color: #706cea;
-    font-size: 10px;
-    font-weight: bold;
-}
-
 .dashboardImg {
     width: 20px;
     margin-right: 10px;
+    font-size: 17px;
+    margin-left: 10px;
 }
 
 span {
     margin-left: 5px;
     font-size: 18px;
-}
-
-.MeetNox {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    background-color: #706cea;
-    width: 100%;
-    min-height: 150px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.MeetNox img {
-    width: 90px;
-    margin-left: -20px;
-    margin-bottom: -20px;
-}
-
-.text {
-    width: auto;
-    height: 100px;
-    float: none;
-    color: #edecf9;
-    padding: 0 5px;
-}
-
-.text h3 {
-    font-size: 16px;
-}
-
-.text p {
-    font-size: 11px;
-    margin: 8px 0;
 }
 
 a {
@@ -107,5 +69,5 @@ a {
 
 .menuContainer a i {
     font-size: 17px;
-    margin-right: 10px;
+    margin-left: 10px;
 }

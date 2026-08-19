@@ -1,51 +1,105 @@
 header {
     display: flex;
-    align-items: center;
+    flex-direction: row-reverse;
     justify-content: space-between;
     width: 100%;
     padding: 20px 30px;
+    height: 100px;
+    overflow: visible;
 }
 
-.days {
+.days,
+.stars,
+.diamonds {
     display: flex;
     align-items: center;
-    width: 100px;
-    min-height: 45px;
+    width: auto;
+    max-height: 45px;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    margin-left: 10px;
+}
+
+.days {
+    margin-left: 20px;
 }
 
 .informations {
     display: flex;
-    align-items: center;
     gap: 15px;
 }
 
-.language-select {
+.languageMenu {
+    z-index: 5;
+    width: auto;
+    align-items:center ;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.languageItem {
+    height: 55px;
     display: flex;
     align-items: center;
-    width: 140px;
-    height: 45px;
-    padding: 8px 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-}
-
-.language-select img {
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.language-select select {
-    width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 14px;
+    padding: 0 10px;
+    gap: 10px;
     cursor: pointer;
+}
+
+.languageItem:hover {
+    background-color: #f7f7f7;
+}
+
+.languageName {
+    flex: 1;
+    text-align: right;
+    font-size: 16px;
+    color: #151525;
+}
+
+.addLanguage span{
+    font-size: 15px;
+}
+
+.flag {
+    width: 30px;
+    height: 30px;
+    line-height: 1;
+}
+
+.addLanguage {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #171729;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.languageItem.selected{
+    padding-bottom: 10%;
+}
+
+.languageItem.selected i{
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.plusIcon {
+    width: 21px;
+    height: 21px;
+    border: 1.5px solid #645cff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #645cff;
+    font-size: 9px;
 }
 
 .messages {
@@ -63,9 +117,10 @@ header {
 .profile {
     display: flex;
     align-items: center;
-    width: 110px;
+    justify-content: center;
+    width: auto;
     height: 45px;
-    padding: 10px;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     cursor: pointer;
@@ -76,12 +131,20 @@ header {
     height: 28px;
     border-radius: 50%;
     flex-shrink: 0;
+    margin-left: 5px;
+}
+
+.greeting h1 {
+    font-weight: 500;
+}
+
+.greeting p {
+    color: #64748B;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 @media (max-width: 700px) {
-    .language-select {
-        width: 40px;
-    }
 
     .days {
         width: 40px;
