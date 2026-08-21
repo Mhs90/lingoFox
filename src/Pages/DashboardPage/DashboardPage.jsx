@@ -16,7 +16,7 @@ export default function DashboardPage() {
 
                     <div className="messageBox">
                         <div className="left">
-                            <p className="adventure">✨ ماجراجویی امروز</p>
+                            <p className="todayAdventure">✨ ماجراجویی امروز</p>
                             <h1>در فرودگاه ✈️</h1>
                             <p className="note">باهم یاد میگیریم چطور آدرس بپرسیم و مقصدمون رو مشخص کنیم!</p>
                             <div className="banners">

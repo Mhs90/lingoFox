@@ -8,8 +8,8 @@
     width: 240px;
     height: 100vh;
     padding: 20px 16px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
     background-color: white;
+    border-left:1px solid #8b8b8b28;
 }
 
 .logo {

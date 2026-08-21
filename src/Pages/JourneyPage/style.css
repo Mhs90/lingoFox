@@ -1,31 +1,50 @@
 main {
     margin-right: 240px;
     min-height: 100vh;
+    width: calc(100vw - 250px);
+    float: left;
 }
 
-.map {
+.container {
+    width: 100%;
+    height: 1020px;
     position: relative;
-    width: 95%;
-    height: 800px;
-    background-image: url('../../../public/assets/hils.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+.map {
+    position: absolute;
+    width: 904px;
+    height: 600px;
+    top: 175px;
+    left: 65px;
+    background-image: url('../../../public/assets/hils2.png');
     background-size: cover;
     background-position: center;
     border-radius: 25px;
-    margin: 0 auto;
+    overflow: hidden;
 }
+
+/* -----------status------------ */
 
 .status {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: white;
-    width: 750px;
-    height: 100px;
+    width: 904px;
+    height: 104px;
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 30px;
+    left: 65px;
     border-radius: 10px;
     padding: 5px 10px;
     z-index: 1;
+    border: 1px solid #60748f34;
 }
 
 .status-detail {
@@ -33,6 +52,11 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 225px;
+}
+
+.status-detail img {
+    width: 30px;
 }
 
 .journeyTitleContainer {
@@ -86,10 +110,11 @@ main {
     color: #7e7b7b;
     font-size: 13px;
     margin: 5px;
+    display: flex;
 }
 
-.journeyUnderTitle i {
-    margin-right: 11px;
+.journeyUnderTitle img {
+    margin-left: 11px;
 }
 
 .journeyUnderTitle .fa-book-open {
@@ -110,31 +135,39 @@ main {
     font-size: 15px;
 }
 
-.comunication {
+/* --------------adventure------------ */
+.adventure {
     background-color: white;
-    width: 240px;
+    width: 250px;
     height: auto;
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 30px;
+    right: 60px;
     border-radius: 10px;
     padding: 15px;
     display: flex;
     flex-direction: column;
     gap: 11px;
+    border: 1px solid #6463631e;
 }
 
-.comunication img {
+.adventure img {
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
-.comunicationTitle {
+.adventureTitle {
     font-size: 14px;
     font-weight: 500;
 }
 
+.adventure .journeyUnderTitle {
+    font-size: 12px;
+}
+
 .inProgres {
-    width: 70px;
+    width: 90px;
     padding: 3px 7px;
     border-radius: 7px;
     background-color: #706cea3f;
@@ -174,9 +207,10 @@ main {
     height: 100%;
     background: #5b5ce2;
     border-radius: 10px;
+    float: left;
 }
 
-.comunication button {
+.adventure button {
     background-image: linear-gradient(#EA8227, #F59E0B);
     padding: 5px;
     border: none;
@@ -186,16 +220,23 @@ main {
     cursor: pointer;
 }
 
+.journeyUnderTitle img {
+    width: 15px;
+}
+
+/*---------------- reward--------------- */
 .reward {
     border: .5 solid #F59E0B;
     background-color: #FFF5E3;
-    width: 280px;
-    height: 170px;
+    width: 250px;
+    height: auto;
     position: absolute;
-    right: 20px;
-    top: 530px;
+    right: 60px;
+    top: 570px;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .reward-progress-bar {
@@ -215,13 +256,13 @@ main {
     height: 100%;
     background: #F59E0B;
     border-radius: 10px;
+    float: left;
 }
 
 .reward img {
-    width: 120px;
-    position: absolute;
-    right: 12px;
-    bottom: 10px;
+    width: 75px;
+    height: 60px;
+    margin-top: 35%;
 }
 
 .description {
@@ -229,28 +270,26 @@ main {
     color: #646363;
 }
 
+.rewardTitle {
+    margin-right: -180px;
+}
+
 .progressTitle {
     font-size: 13px;
 }
 
+/* --------------timeline--------------- */
+
 .timelineContainer {
     background-color: #FEFEFE;
     position: absolute;
-    bottom: -120px;
-    width: 98%;
-    height: 200px;
+    bottom: 0;
+    width: 1190px;
+    margin: 0 auto;
+    height: 220px;
     border-radius: 10px;
-    left: 1%;
     padding: 20px;
     border: .5px solid #E1E1E1;
-}
-
-.timelineContainer a {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #6662Eb;
-    font-size: 13px;
 }
 
 .timelineTitle {
@@ -270,11 +309,11 @@ main {
 
 .stations {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 13.5%;
     margin-top: 25px;
     z-index: 1;
-    margin-left: 4%;
+    margin-left: 5%;
 }
 
 .station {
@@ -282,7 +321,7 @@ main {
     height: 50px;
     border: .5px solid #6662EB;
     background-color: #EDECF9;
-    color: #6662EB;
+    color: #58B161;
     border-radius: 50%;
     position: relative;
     display: flex;
@@ -290,28 +329,55 @@ main {
     align-items: center;
     text-align: center;
     padding: 10px;
-    font-size: 25px;
+    font-size: 15px;
+    background-color: #F8FAFC;
+    border: 0.5px solid #E1E1E1;
+    color: #64748B;
+}
+
+.station img{
+    width: 24px;
+    height: 24px;
+}
+
+.currentLevel{
+    font-size: 11px;
+}
+
+.nextLevel{
+    color: #646363;
+    font-size: 11px;
 }
 
 .success {
     background-color: #58B161;
     border: 0.5px solid #58B161;
-    width: 10px;
-    height: 10px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     color: #EEFEF0;
     font-size: 8px;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
-.station p {
+.station .bottom {
     text-align: center;
     color: black;
     font-size: 13px;
     width: 120px;
-    margin-top: 20px;
+    position: absolute;
+    bottom: -30px;
+}
+
+.station footer{
+    color: #646363;
+    font-size: 11px;
+    position: absolute;
+    bottom: -48px;
+    width: 200%;
+}
+
+.station.continuing footer{
+    color: #3b68E3;
 }
 
 .ahead {
@@ -321,23 +387,25 @@ main {
     border-radius: 10px;
     position: absolute;
     top: -5px;
-}
-
-.station.close {
-    background-color: #F8FAFC;
-    border: .5px solid #E1E1E1;
-    color: #64748B;
+    left: 0;
 }
 
 .station.continuing {
-    box-shadow: 0 0 12px #5b5be2b7;
+    border: 5px solid #EDECF9;
+    background-color: #6662EB;
 }
 
+.station.tick,.station.currentLevel{
+    background-color: #EEFEF0;
+    border: 0.3px solid #58B161;
+}
+
+/*---------------- tasks--------------- */
 .journey-task {
     background-color: #F3E0C4;
     border: 2px solid #FFD392;
-    width: 110px;
-    height: 80px;
+    width: 112px;
+    height: 75px;
     color: #817B63;
     border-radius: 15px;
     position: absolute;
@@ -348,8 +416,8 @@ main {
 }
 
 .numberOfTask {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background-color: #817B63;
     border: 3px solid #BBBBBB;
     color: white;
@@ -358,7 +426,7 @@ main {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: -29px;
+    top: -29.5px;
 }
 
 .foxTopOfContinuing {
@@ -392,37 +460,50 @@ main {
 
 .stars {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 7px;
+}
+
+.lock{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.stars i{
+    font-size: 15px;
 }
 
 .firstTask {
-    bottom: 150px;
-    right: 590px;
+    bottom: 7%;
+    right: 38%;
 }
 
 .secondTask {
-    bottom: 260px;
-    right: 340px;
+    bottom: 22%;
+    right: 7%;
 }
 
 .thirdTask {
-    right: 340px;
-    top: 270px;
+    right: 6%;
+    top: 35%;
 }
 
 .forthTask {
-    top: 120px;
-    left: 530px;
+    top: 8%;
+    right: 33%;
 }
 
 .fifthTask {
-    top: 200px;
-    left: 307px;
+    top: 24%;
+    left: 29%;
 }
 
 .sixthTask {
-    top: 400px;
-    left: 100px;
+    top: 60%;
+    left: 8%;
 }
 
 .journey-task.continuingTask .numberOfTask,
@@ -433,19 +514,64 @@ main {
 
 .journey-task p {
     color: black;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 500;
     text-align: center;
     width: 90px;
     margin-top: 20px;
     margin-bottom: 1px;
 }
 
+.pined {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 232px;
+    height: 98px;
+    z-index: 10;
+    border-radius: 8px;
+    background-color: #0f172a94;
+    border: 0.3px solid #e1e1e179;
+    box-shadow: 2px 4px 9px #ffffff42;
+    padding: 16px;
+}
+
+.pined .pin{
+    position: absolute;
+    width: 40.49px;
+    height: 37px;
+    top: -12px;
+    left: -10px;
+    transform: rotate(300deg);
+}
+
+.pined h6{
+    font-size: 15px;
+    font-weight: 500;
+    color: #FBFBFB;
+    margin-bottom: 15px;
+}
+
+.pined p{
+    color: #EA8227;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pined p img{
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+}
+
 .map-controls {
     position: absolute;
-    right: 17%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
+    left: 20px;
+    bottom: 20px;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -485,579 +611,39 @@ main {
     box-shadow: none;
 }
 
-.react-transform-wrapper {
+.map-transform-wrapper {
     width: 100% !important;
-    height: 920px !important;
+    height: 100% !important;
+    overflow: hidden !important;
 }
 
-.react-transform-component {
-    width: 100% !important;
-    height: 920px !important;
-    overflow: visible !important;
+.map-transform-content {
+    width: 904px !important;
+    height: 600px !important;
 }
 
-.react-transform-component>.map {
-    width: 95%;
-    height: 800px;
-    margin: 0 auto;
+.map-content {
+    position: relative;
+    width: 904px;
+    height: 600px;
 }
 
-.map-controls.zoomed {
-    right: 10px;
+.map-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 904px;
+    height: 600px;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
 }
 
-@media (max-width: 900px) {
-
-    main {
-        margin-left: 200px;
-        width: calc(100% - 200px);
-        min-width: 0;
-    }
-
-    .react-transform-wrapper {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 1150px !important;
-    }
-
-    .react-transform-component {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 1150px !important;
-        overflow: visible !important;
-    }
-
-    .map {
-        width: calc(100% - 30px);
-        min-height: 1150px;
-        height: auto;
-        margin: 10px auto;
-        border-radius: 20px;
-        background-size: cover;
-        background-position: center;
-        overflow: visible;
-    }
-
-    .status {
-        width: calc(100% - 30px);
-        height: 90px;
-        top: 15px;
-        left: 15px;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
-        padding: 5px;
-        box-sizing: border-box;
-    }
-
-    .status-detail {
-        justify-content: center;
-        min-width: 0;
-    }
-
-    .journey-badge {
-        width: 45px;
-        height: 45px;
-        font-size: 22px;
-        flex-shrink: 0;
-    }
-
-    .journeyTitleContainer {
-        width: auto;
-        min-width: 0;
-        margin-left: 4px;
-    }
-
-    .journeyTitle {
-        font-size: 13px;
-        margin: 3px;
-        white-space: nowrap;
-    }
-
-    .journeyUnderTitle {
-        font-size: 10px;
-        margin: 3px;
-        white-space: nowrap;
-    }
-
-    .journeyTitleContainer .journey-title {
-        font-size: 13px;
-    }
-
-    .comunication {
-        width: 220px;
-        top: 125px;
-        right: 15px;
-        padding: 12px;
-        gap: 8px;
-        box-sizing: border-box;
-    }
-
-    .comunication img {
-        width: 100%;
-        max-height: 120px;
-        object-fit: contain;
-    }
-
-    .comunicationTitle {
-        font-size: 13px;
-    }
-
-    .bodyParagraph {
-        font-size: 12px;
-    }
-
-    .journey-progress-bar {
-        width: 140px;
-    }
-
-    .comunication button {
-        width: 100%;
-        height: 32px;
-    }
-
-    .reward {
-        width: 250px;
-        height: 160px;
-        top: 480px;
-        right: 15px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .reward .details {
-        width: 58%;
-    }
-
-    .reward img {
-        width: 105px;
-        right: 8px;
-        bottom: 8px;
-    }
-
-    .description {
-        font-size: 11px;
-    }
-
-    .progressTitle {
-        font-size: 11px;
-    }
-
-    .reward-progress-bar {
-        width: 130px;
-    }
-
-    .timelineContainer {
-        width: calc(100% - 30px);
-        left: 15px;
-        bottom: -120px;
-        height: 190px;
-        padding: 15px;
-        box-sizing: border-box;
-    }
-
-    .timelineTitle {
-        font-size: 15px;
-    }
-
-    .timelineContainer a {
-        top: 15px;
-        right: 15px;
-        font-size: 11px;
-    }
-
-    .timeline-bar {
-        width: 85%;
-        left: 7.5%;
-    }
-
-    .stations {
-        gap: 7%;
-        margin-left: 3%;
-    }
-
-    .station {
-        width: 45px;
-        height: 45px;
-        padding: 8px;
-        font-size: 22px;
-    }
-
-    .station p {
-        width: 100px;
-        font-size: 11px;
-    }
-
-    .journey-task {
-        width: 95px;
-        height: 70px;
-    }
-
-    .journey-task p {
-        width: 80px;
-        font-size: 11px;
-    }
-
-    .numberOfTask {
-        width: 40px;
-        height: 40px;
-        top: -25px;
-    }
-
-    .foxTopOfContinuing {
-        width: 40px;
-        height: 40px;
-        top: -80px;
-    }
-
-    .foxTopOfContinuing img {
-        width: 35px;
-    }
-
-    .firstTask {
-        right: 58%;
-        bottom: 180px;
-    }
-
-    .secondTask {
-        right: 32%;
-        bottom: 290px;
-    }
-
-    .thirdTask {
-        right: 32%;
-        top: 350px;
-    }
-
-    .forthTask {
-        left: 58%;
-        top: 170px;
-    }
-
-    .fifthTask {
-        left: 32%;
-        top: 250px;
-    }
-
-    .sixthTask {
-        left: 8%;
-        top: 450px;
-    }
-}
-
-@media (max-width: 700px) {
-
-    main {
-        margin-left: 70px;
-        width: calc(100% - 70px);
-        min-width: 0;
-        overflow-x: hidden;
-        overflow-y: visible;
-    }
-
-    .react-transform-wrapper {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
-        overflow: visible !important;
-        touch-action: pan-y !important;
-    }
-
-    .react-transform-component {
-        width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
-        overflow: visible !important;
-        touch-action: pan-y !important;
-    }
-
-    .map {
-        width: calc(100% - 20px);
-        height: 2000px;
-        min-height: 2000px;
-        margin: 10px auto;
-        overflow: visible;
-        border-radius: 18px;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .status {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: calc(100% - 20px);
-        height: auto;
-        margin: 10px auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .status-detail {
-        justify-content: flex-start;
-        align-items: center;
-        min-width: 0;
-    }
-
-    .journey-badge {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        flex-shrink: 0;
-    }
-
-    .journeyTitleContainer {
-        width: auto;
-        min-width: 0;
-        margin-left: 5px;
-    }
-
-    .journeyTitle {
-        font-size: 14px;
-        margin: 3px;
-        white-space: nowrap;
-    }
-
-    .journeyUnderTitle {
-        font-size: 10px;
-        margin: 3px;
-    }
-
-    .comunication {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: calc(100% - 20px);
-        height: auto;
-        margin: 15px auto;
-        padding: 12px;
-        box-sizing: border-box;
-    }
-
-    .comunication img {
-        width: 100%;
-        max-height: 130px;
-        object-fit: contain;
-    }
-
-    .comunicationTitle {
-        font-size: 13px;
-    }
-
-    .bodyParagraph {
-        font-size: 12px;
-        margin: 3px 0;
-    }
-
-    .journey-progress-bar {
-        width: calc(100% - 35px);
-        max-width: 170px;
-    }
-
-    .comunication button {
-        width: 100%;
-    }
-
-    .reward {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: calc(100% - 20px);
-        height: 160px;
-        margin: 15px auto;
-        box-sizing: border-box;
-    }
-
-    .reward .details {
-        width: 60%;
-    }
-
-    .reward img {
-        width: 100px;
-        right: 10px;
-        bottom: 10px;
-    }
-
-    .description {
-        font-size: 11px;
-    }
-
-    .progressTitle {
-        font-size: 11px;
-    }
-
-    .reward-progress-bar {
-        width: 120px;
-        max-width: 100%;
-    }
-
-    .timelineContainer {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        width: calc(100% - 20px);
-        height: 450px;
-        margin: 15px auto;
-        padding: 15px;
-        box-sizing: border-box;
-    }
-
-    .timelineTitle {
-        font-size: 14px;
-        margin-bottom: 5px;
-    }
-
-    .timelineContainer a {
-        top: 15px;
-        right: 15px;
-        font-size: 10px;
-    }
-
-    .timelineContainer>.journeyUnderTitle {
-        font-size: 10px;
-    }
-
-    .timeline-bar {
-        width: 4px;
-        height: 350px;
-        border-top: none;
-        background-color: #646363;
-        left: 35px;
-        top: 80px;
-        margin: 0;
-        border-radius: 10px;
-    }
-
-    .ahead {
-        width: 100%;
-        height: 40%;
-        top: 0;
-        left: 0;
-    }
-
-    .stations {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        margin: 30px 0 0 0;
-        padding-left: 10px;
-    }
-
-    .station {
-        width: 35px;
-        height: 35px;
-        padding: 7px;
-        font-size: 18px;
-        margin-left: 10px;
-    }
-
-    .station p {
-        position: absolute;
-        left: 55px;
-        top: 0;
-        width: 150px;
-        margin: 5px 0;
-        text-align: left;
-        font-size: 11px;
-    }
-
-    .success {
-        width: 8px;
-        height: 8px;
-        font-size: 6px;
-    }
-
-    .journey-tasks {
-        position: relative;
-        width: calc(100% - 20px);
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 45px;
-        box-sizing: border-box;
-    }
-
-    .journey-task {
-        position: relative;
-        top: auto;
-        right: auto;
-        left: auto;
-        bottom: auto;
-        width: 110px;
-        height: 80px;
-        flex-shrink: 0;
-    }
-
-    .foxTopOfContinuing {
-        top: -55px;
-    }
-
-    .numberOfTask {
-        width: 38px;
-        height: 38px;
-        top: -24px;
-    }
-
-    .journey-task p {
-        width: 90px;
-        font-size: 11px;
-    }
-
-    .stars {
-        font-size: 14px;
-    }
-
-    .map-controls {
-        display: none;
-    }
-}
-
-@media (max-width: 450px) {
-    .map {
-        height: 2200px;
-        min-height: 2200px;
-    }
-
-    .status {
-        grid-template-columns: 1fr;
-    }
-
-    .status-detail {
-        justify-content: flex-start;
-    }
-
-    .journey-badge {
-        width: 38px;
-        height: 38px;
-        font-size: 17px;
-    }
-
-    .timelineContainer {
-        height: 500px;
-    }
-
-    .timeline-bar {
-        height: 360px;
-    }
-
-    .stations {
-        top: 105px;
-    }
-
-    .reward .details {
-        width: 58%;
-    }
-
-    .reward img {
-        width: 90px;
-    }
-}
-
-@media (max-width : 1800px) {
-    .map-controls {
-        right: 20%;
-    }
+.journey-tasks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 904px;
+    height: 600px;
+    z-index: 2;
 }

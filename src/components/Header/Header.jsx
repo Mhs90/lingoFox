@@ -11,7 +11,7 @@ export default function Header() {
             <div className="informations">
                 <div className="variables"></div>
                 <div className="diamonds">💎12  الماس</div>
-                <div className="stars">⭐480 امتیاز</div>
+                <div className="points">⭐480 امتیاز</div>
                 <div className="days">🔥12 روز پیاپی</div>
                 <div className="languageMenu" style={{ height: `${!isOpen ? '45px' : `${55*4}px`}` }}>
                     {!isOpen ? <div className="languageItem selected" onClick={e => setIsOpen(true)}>

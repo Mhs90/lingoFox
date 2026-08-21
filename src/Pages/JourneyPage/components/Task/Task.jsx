@@ -18,13 +18,25 @@ export default function Task({ numberOftask, condition, text, numberOfStars }) {
                 {text}
             </p>
             {
-                numberOfStars >=0 ?
+                numberOfStars >= 0 ?
                     <div className="stars">
-                        <span style={{ color: `${numberOfStars >= 1 ? '#FAC747' : '#EBAD76'} ` }}>{numberOfStars >= 1 ? '★' : '☆'}</span>
-                        <span style={{ color: `${numberOfStars >= 2 ? '#FAC747' : '#EBAD76'} ` }}>{numberOfStars >= 2 ? '★' : '☆'}</span>
-                        <span style={{ color: `${numberOfStars === 3 ? '#FAC747' : '#EBAD76'} ` }}>{numberOfStars === 3 ? '★' : '☆'}</span>
+                        <span style={{ color: `${numberOfStars >= 1 ? '#FAC747' : '#EBAD76'} ` }}>
+                            {numberOfStars >= 1 ?
+                                <i className="fas fa-star"></i> :
+                                <i className="far fa-star"></i>}
+                        </span>
+                        <span style={{ color: `${numberOfStars >= 2 ? '#FAC747' : '#EBAD76'} ` }}>
+                            {numberOfStars >= 2 ?
+                                <i className="fas fa-star"></i> :
+                                <i className="far fa-star"></i>}
+                        </span>
+                        <span style={{ color: `${numberOfStars === 3 ? '#FAC747' : '#EBAD76'} ` }}>
+                            {numberOfStars === 3 ?
+                                <i className="fas fa-star"></i> :
+                                <i className="far fa-star"></i>}
+                        </span>
                     </div> :
-                    <i className="fa-solid fa-lock"></i>
+                    <img src="/assets/lock.png" alt="lock" className="lock" />
             }
         </div>
     )
