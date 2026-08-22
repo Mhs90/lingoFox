@@ -192,7 +192,8 @@ export default function JourneyPage() {
                             بهترین سرمایه گذاری،یادگیری مداومه!🌿
                         </p>
                         <div className="timeline-bar">
-                            <div className="ahead"></div>
+                            <div className="ahead" style={{ width: '30%' , zIndex: '1'}}></div>
+                            <div className="ahead" style={{width: '40%',backgroundColor: '#6662EB'}}></div>
                         </div>
                         <div className="stations">
                             <Station

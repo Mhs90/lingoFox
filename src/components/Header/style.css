@@ -83,6 +83,7 @@ header {
 
 .languageItem.selected{
     padding-bottom: 10%;
+    position: relative;
 }
 
 .languageItem.selected i{
@@ -142,4 +143,24 @@ header {
     color: #64748B;
     font-weight: 400;
     font-size: 14px;
+}
+
+.languageItem.selected .success {
+    background-color: #58B161;
+    border: 0.5px solid #58B161;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    color: #EEFEF0;
+    position: absolute;
+    right: 9px;
+    top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.languageItem.selected .success i{
+    margin: 0;
+    font-size: 5px;
 }
