@@ -4,7 +4,7 @@ export default function Station({ text, footerText, icon, condition, level }) {
             {
                 condition === 'currentLevel' ?
                     <>
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i className="fa-solid fa-location-dot"></i>
                         <p className="levelName">{level}</p>
                     </>
                     : condition === 'nextLevel' ?

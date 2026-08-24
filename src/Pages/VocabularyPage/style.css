@@ -1,0 +1,905 @@
+/* -----------------Page Title-------------------- */
+
+.pageTitleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.pageTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pageTitle h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.pageTitle p {
+    font-weight: 400;
+    font-size: 20px;
+    color: #64748B;
+}
+
+.titleBadge {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #6662EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleBadge img {
+    width: 36px;
+    height: 36px;
+}
+
+/* ----------------general---------------- */
+.general {
+    width: 1145px;
+    height: 284px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FEFEFE;
+    border: 0.3px solid #E1E1E1;
+    margin: 0 auto;
+    padding: 25px;
+    position: relative;
+}
+
+.general .generalRight {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.general .works {
+    width: 559px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.general .works .work {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.general .works .work.fluent {
+    background-color: #EEFEF0;
+    border: 0.5px solid #58b16156;
+}
+
+.general .works .work.stabilization {
+    background-color: #FFF5E3;
+    border: 0.5px solid #F59E0B56;
+}
+
+.general .works .work.overview {
+    background-color: #FFF4F4;
+    border: 0.5px solid #F0454D56;
+}
+
+.general .works .work h4 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.general .works .work p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #64748B;
+}
+
+.general .works .work.fluent h4 {
+    color: #58B161;
+}
+
+.general .works .work.work.stabilization h4 {
+    color: #F59E0B;
+}
+
+.general .works .work.overview h4 {
+    color: #F0454D;
+}
+
+
+.progress-bar {
+    width: 110px;
+    height: 2px;
+    border-radius: 10px;
+    display: inline-block;
+    overflow: hidden;
+    background-color: #EDECF9;
+    margin-top: 20px;
+}
+
+.progress {
+    width: 8%;
+    height: 100%;
+    border-radius: 10px;
+    float: left;
+    background-color: #6662EB;
+}
+
+.progressbarContainer span {
+    font-size: 10px;
+    color: #8b8b8b;
+    margin-left: 5px;
+}
+
+.work.overview .progress-bar {
+    background-color: #f0454d56;
+}
+
+.work.overview .progress {
+    background-color: #F0454D;
+}
+
+.work.stabilization .progress-bar {
+    background-color: #F59E0B56;
+}
+
+.work.work.stabilization .progress {
+    background-color: #F59E0B;
+}
+
+.work.fluent .progress-bar {
+    background-color: #58B16156;
+}
+
+.work.fluent .progress {
+    background-color: #58B161;
+}
+
+.generalLeft {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.generalLeft button i {
+    margin-left: 5px;
+}
+
+.generalLeft button {
+    width: 133px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid #E1E1E1;
+    background-color: #FEFEFE;
+    color: #64748B;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.generalLeft .progress-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.generalLeft .progress-circle::before {
+    content: "";
+    width: 117px;
+    height: 117px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.generalLeft .progress-circle span {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.generalLeft .progress-circle span span {
+    font-size: 12px;
+    color: #64748B;
+}
+
+.general .talking {
+    position: absolute;
+    left: 0px;
+    top: -60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.general .talking img {
+    width: 149px;
+    height: 114px;
+}
+
+.foxMessage p {
+    font-size: 13px;
+    font-weight: 400;
+    width: 120px;
+}
+
+.foxMessage {
+    position: absolute;
+    background-color: #FEFEFE;
+    border: 0.5px solid #E1E1E1;
+    width: 179px;
+    height: 92.35px;
+    border-radius: 40px;
+    margin-left: 30px;
+    color: black;
+    padding: 10px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 135px;
+    top: -110px;
+    z-index: 2;
+}
+
+.foxMessage::after {
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    right: 167px;
+    width: 20px;
+    height: 20px;
+    background: #FEFEFE;
+    border-left: 0.5px solid #E1E1E1;
+    border-bottom: 0.5px solid #E1E1E1;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+/* -------------------needOverview-------------------- */
+
+.vocabWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 16px;
+}
+
+.needOverview {
+    width: 550px;
+    height: 347px;
+    border-radius: 12px;
+    border: 1px solid #F59E0B;
+    background-color: #FFF5E3;
+    padding: 32px;
+    position: relative;
+}
+
+.needOverview .title {
+    color: #F59E0B;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.needOverview .text {
+    color: #64748B;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.needOverview .footerText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #64748B;
+}
+
+.wordsNeed {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+}
+
+.wordsNeed .word {
+    width: 70px;
+    height: 78px;
+    border: 1px solid #F59E0B;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FEFEFE;
+}
+
+.wordsNeed .word h6 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.wordsNeed .word p {
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.needOverview button {
+    background-color: #FFF5E3;
+    border: 1px solid #f59f0b94;
+    color: #F59E0B;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    width: 140px;
+    height: 36px;
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    cursor: pointer;
+}
+
+/* --------------thisWeekWord---------------- */
+.thisWeekWord {
+    border: 1px solid #6662EB;
+    background-color: #EDECF9;
+    width: 579px;
+    height: 350px;
+    border-radius: 12px;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.thisWeekWord header {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    width: 173px;
+    height: 79px;
+    gap: 16px;
+}
+
+.thisWeekWord header .title {
+    color: #6662EB;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.thisWeekWord header .information img {
+    width: 20px;
+    height: 20px;
+}
+
+.thisWeekWord header .information {
+    display: flex;
+    flex-direction: row;
+    color: #EA8227;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+    gap: 8px;
+}
+
+.thisWeekWord .foxReading {
+    width: 222px;
+    height: 208px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.thisWeekWord main {
+    all: unset;
+    margin: 0;
+    width: 40px;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.playBtn {
+    all: unset;
+    ;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0.5px solid #6662EB;
+    color: #6662EB;
+    background-color: #DBDAFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bookMarkBtn {
+    font-size: 20px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 0.5px solid #E1E1E1;
+    background-color: #FFFEF3;
+    color: #FAC747;
+    cursor: pointer;
+}
+
+.thisWeekWord footer {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    width: 96px;
+    height: 167px;
+    gap: 8px;
+    text-align: left;
+}
+
+.thisWeekWord footer .wordInOtherLan {
+    color: #6662EB;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.thisWeekWord footer .wordSound {
+    color: #64748B;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.thisWeekWord footer .meaning {
+    font-weight: 500;
+    font-size: 24px;
+    color: #64748B;
+}
+
+.thisWeekWord .learnBtn {
+    width: 140px;
+    height: 36px;
+    border: 1px solid #6662EB;
+    color: #6662EB;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #EDECF9;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    cursor: pointer;
+}
+
+/* ---------------------today practice--------------------- */
+
+.todayPractice {
+    width: 1145px;
+    height: 250px;
+    border-radius: 12px;
+    border: 0.5px solid #E1E1E1;
+    margin: 0 auto;
+    position: relative;
+}
+
+.todayPractice header a {
+    font-weight: 500;
+    color: #6662EB;
+    font-size: 12px;
+}
+
+.todayPractice header .title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #0F172A;
+}
+
+.practices {
+    width: 1121px;
+    height: 140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    overflow: hidden;
+}
+
+.practice {
+    width: 220px;
+    height: 130px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    flex: 0 0 220px;
+}
+
+.practice.brain {
+    background-color: #EDECF9;
+    border: 0.5px solid #6662eb6e;
+}
+
+.practice.brain .title {
+    color: #6662EB;
+}
+
+.practice.brain button {
+    color: #6662EB;
+    border-color: #6662EB;
+}
+
+.practice.microphone {
+    background-color: #EEFEF0;
+    border: 0.5px solid #58B1616e;
+}
+
+.practice.microphone .title {
+    color: #58B161;
+}
+
+.practice.microphone button {
+    color: #58B161;
+    border-color: #58B161;
+}
+
+.practice.headphone {
+    background-color: #E4ECF9;
+    border: 0.5px solid #3B68E36e;
+}
+
+.practice.headphone .title {
+    color: #3b68e3;
+}
+
+.practice.headphone button {
+    color: #3b68e3;
+    border-color: #3b68e3;
+}
+
+.practice.pencil {
+    background-color: #FFF5E3;
+    border: 0.5px solid #F59E0B6e;
+}
+
+.practice.pencil .title {
+    color: #F59E0B;
+}
+
+.practice.pencil button {
+    color: #F59E0B;
+    border-color: #F59E0B;
+}
+
+.practice img {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+.practice .title {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 11px;
+}
+
+.practice .underTitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: #64748B;
+}
+
+.practice button {
+    width: 130px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    border: 1px solid;
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.todayPractice .goLeft {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #FEFEFE;
+    border: 1px solid #E1E1E1;
+    border-radius: 50%;
+    left: 0px;
+    color: #64748B;
+    cursor: pointer;
+}
+
+.todayPractice .goRight {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #FEFEFE;
+    border: 1px solid #E1E1E1;
+    border-radius: 50%;
+    right: 0px;
+    color: #64748B;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* ------------------myWords-------------------- */
+.myWords {
+    width: 1145px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #E1E1E1;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.myWords header {
+    display: flex;
+    flex-direction: column;
+}
+
+.myWords header h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #0F172A;
+}
+
+.filterAndSearch {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filterAndSearch button {
+    background: none;
+    width: 172px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #E1E1E1;
+    color: #64748B;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.searchBox {
+    width: 438px;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.searchBox i {
+    font-size: 16px;
+    color: #637794;
+    margin-left: 10px;
+}
+
+.searchBox input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: right;
+    color: #637794;
+}
+
+.searchBox input::placeholder {
+    color: #637794;
+}
+
+.filterAndSearch select {
+    width: 290px;
+    height: 45px;
+    border: 1px solid #E1E1E1;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.sortSelect {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sortSelect i {
+    margin-left: -50px;
+    z-index: 1;
+    color: #64748B;
+}
+
+.filterAndSearch button i {
+    margin-left: 10px;
+}
+
+.myWords .letersAndWords {
+    all: unset;
+    width: 1097px;
+    height: auto;
+    display: flex;
+}
+
+.myWords .letersAndWords .letters {
+    width: 50px;
+    height: auto;
+    border: 1px solid #E1E1E1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    gap: 24px;
+    margin-right: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.letters a {
+    font-size: 20px;
+    text-align: center;
+    color: #64748B;
+}
+
+.myWords .letersAndWords {
+    width: 1097px;
+    height: auto;
+    display: flex;
+}
+
+.myWords .letters {
+    width: 50px;
+    border: 1px solid #E1E1E1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    gap: 24px;
+    margin-right: 30px;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.myWords .words {
+    all: unset;
+    width: 1023px;
+    height: auto;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+.wordsOfLetter {
+    width: 100%;
+}
+
+.wordsOfLetter>header {
+    width: 100%;
+    height: 50px;
+    background-color: #EDECF9;
+    border-radius: 12px;
+    padding-top: 6px;
+    padding-right: 32px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #6662EB;
+    text-align: right;
+}
+
+.wordRow {
+    width: 100%;
+    height: 74px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 0 32px;
+    color: #64748B;
+    font-size: 14.5px;
+    font-weight: 500;
+    position: relative;
+}
+
+.wordRow.first {
+    height: 60px;
+    color: #0F172A;
+}
+
+.wordsOfLetter hr {
+    width: 94%;
+    margin: 0 3%;
+    border: none;
+    border-top: 1px solid #E1E1E1;
+}
+
+.wordName {
+    font-size: 20px;
+    color: #0F172A;
+}
+
+.seeMore {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 130px;
+    height: 30px;
+    background-color: #EDECF9;
+    border: 1px solid #6662eb6e;
+    color: #6662EB;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    left: 17px;
+    gap: 7px;
+}
+
+.BookMark {
+    background: none;
+    border: none;
+    color: #FAC747;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.other {
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: #64748B;
+    cursor: pointer;
+    padding-bottom: 13px;
+}
+
+.wordRow .progressBarContainer .progress-bar {
+    width: 90px;
+    height: 4px;
+}
+
+.wordRow .progressbarContainer {
+    display: flex;
+    align-items: center;
+}
+
+.percent {
+    font-size: 10px;
+}

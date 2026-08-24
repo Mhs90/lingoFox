@@ -13,7 +13,7 @@ import Task from './components/Task/Task';
 export default function JourneyPage() {
     return (
         <>
-            <SideBar />
+            <SideBar autoActiveItem="journey"/>
             <main>
                 <Header />
                 <div className="container">
@@ -100,8 +100,8 @@ export default function JourneyPage() {
                             {({ zoomIn, zoomOut, resetTransform }) => (
                                 <>
                                     <TransformComponent
-                                        wrapperClass="map-transform-wrapper"
-                                        contentClass="map-transform-content"
+                                        wrapperclassName="map-transform-wrapper"
+                                        contentclassName="map-transform-content"
                                     >
                                         <div className="map-content">
                                             <img

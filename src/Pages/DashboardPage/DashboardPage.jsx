@@ -157,7 +157,7 @@ export default function DashboardPage() {
                                 <p>چندتا واژه جدید هفته پیش یاد گرفتی، بیا باهاشون جمله بسازیم و مکالمه داشته باشیم!</p>
                             </div>
                         </div>
-                        <Link to="/ai"><button><i class="fa-regular fa-comment-dots"></i>  مکالمه با ناکس</button></Link>
+                        <Link to="/ai"><button><i className="fa-regular fa-comment-dots"></i>  مکالمه با ناکس</button></Link>
                     </div>
                     <div className="libraryContainer">
                         <header>
