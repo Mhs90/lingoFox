@@ -9,6 +9,7 @@ export default function VocabularyPage() {
     const [canScrollLeft, setCanScrollLeft] = useState(true)
     const [canScrollRight, setCanScrollRight] = useState(false)
     const [bookMarkWords, setBookMarkWords] = useState([])
+    const [isWeekWord, setIsWeekWord] = useState(false)
     const containerRef = useRef(null)
 
     const moveRight = () => {
@@ -17,7 +18,6 @@ export default function VocabularyPage() {
             behavior: "smooth"
         });
     };
-
     const moveLeft = () => {
         containerRef.current.scrollBy({
             left: -300,
@@ -49,6 +49,12 @@ export default function VocabularyPage() {
                 : [...prev, word]
         )
     }
+    const speakWord = (word) => {
+        const speech = new SpeechSynthesisUtterance(word);
+        speech.lang = 'zh-CN';
+        speech.rate = 0.8;
+        window.speechSynthesis.speak(speech);
+    };
     useEffect(() => {
         const container = containerRef.current
         if (!container) return
@@ -162,8 +168,8 @@ export default function VocabularyPage() {
                             <p className="information"><img src="/assets/information.png" alt="information" />چرا این واژه ؟</p>
                         </header>
                         <main>
-                            <button className="playBtn"><i className="fas fa-volume-up"></i></button>
-                            <button className="bookMarkBtn"><i className="far fa-star"></i></button>
+                            <button className="playBtn" onClick={() => speakWord('旅行')}><i className="fas fa-volume-up"></i></button>
+                            <button className="bookMarkBtn" onClick={() => isWeekWord ? setIsWeekWord(false) : setIsWeekWord(true)}>{isWeekWord ? <i className="fas fa-star"></i> : <i className="far fa-star"></i>}</button>
                         </main>
                         <footer>
                             <p className="wordInOtherLan">旅行</p>
